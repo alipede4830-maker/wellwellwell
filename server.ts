@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
@@ -365,7 +366,7 @@ async function startServer() {
       client_id: clientId,
       redirect_uri: redirectUri,
       response_type: 'code',
-      scope: 'identify email'
+      scope: 'identify email guilds.join'
     });
 
     res.json({
@@ -426,6 +427,23 @@ async function startServer() {
               };
             }
             await db.upsertUser(user);
+            // Add user to your Discord server
+const guildId = process.env.DISCORD_GUILD_ID?.trim();
+const botToken = process.env.DISCORD_BOT_TOKEN?.trim();
+if (guildId && botToken) {
+  try {
+    await fetch(`https://discord.com/api/guilds/${guildId}/members/${discordId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bot ${botToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ access_token: tokenData.access_token })
+    });
+  } catch (joinErr) {
+    console.warn('[Discord] Failed to auto-join guild:', joinErr);
+  }
+}
 
             const sessionToken = jwt.sign(
               { userId: user.id, email: user.email, name: user.name },
