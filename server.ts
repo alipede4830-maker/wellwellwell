@@ -107,14 +107,16 @@ async function startServer() {
   app.use(express.json());
   app.use(cookieParser());
 
-  const JWT_SECRET = process.env.JWT_SECRET || 'flw-institutional-secret-key-2026';
+    const rawJwtSecret = process.env.JWT_SECRET?.trim();
+  if (!rawJwtSecret) {
+    throw new Error('JWT_SECRET is required.');
+  }
+  const JWT_SECRET: string = rawJwtSecret;
 
   // Helper to resolve session from cookie or Authorization header
   function getAuthUser(req: express.Request): { userId: string; email: string; name: string } | null {
     let token = req.cookies?.flw_session;
-    if (!token && req.headers.authorization) {
-      token = req.headers.authorization.replace(/^Bearer\s+/i, '');
-    }
+
     if (!token) return null;
     try {
       return jwt.verify(token, JWT_SECRET) as { userId: string; email: string; name: string };
@@ -285,66 +287,19 @@ async function startServer() {
   });
 
   // Direct login / sign up with Discord username or email
-  app.post('/api/auth/login', async (req, res) => {
-    try {
-      const { handle, email } = req.body;
-      const rawHandle = (handle && typeof handle === 'string' ? handle.trim() : '') || 'claudio_017';
-      const cleanName = rawHandle.replace(/^@/, '');
-      const userEmail = (email && typeof email === 'string' ? email.trim().toLowerCase() : '') || `${cleanName.toLowerCase()}@discord.gg`;
-      const userId = 'usr_' + cleanName.toLowerCase().replace(/[^a-z0-9_]/g, '');
-
-      let user = await db.getUserByEmail(userEmail);
-      if (!user) {
-        user = await db.getUserById(userId);
-      }
-
-      if (!user) {
-        user = {
-          id: userId,
-          name: cleanName.charAt(0).toUpperCase() + cleanName.slice(1),
-          email: userEmail,
-          accountEquity: 50000,
-          riskPercent: 1.0,
-          preferredInstrument: 'NQ',
-          propFirmCode: 'CLAUDIO',
-          memberSince: new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-        };
-        await db.upsertUser(user);
-      }
-
-      // Generate JWT session token
-      const token = jwt.sign(
-        { userId: user.id, email: user.email, name: user.name },
-        JWT_SECRET,
-        { expiresIn: '30d' }
-      );
-
-      // Set cookie for session persistence in iframes and cross-site
-      res.cookie('flw_session', token, {
-        httpOnly: true,
-        secure: true,
-        sameSite: 'none',
-        maxAge: 30 * 24 * 60 * 60 * 1000
-      });
-
-      res.json({
-        success: true,
-        user: toUserProfile(user),
-        token
-      });
-    } catch (e: any) {
-      console.error('Error in /api/auth/login:', e);
-      res.status(500).json({ error: 'Failed to process login', message: e?.message || 'Server error' });
-    }
+  app.post('/api/auth/login', (_req, res) => {
+  res.status(410).json({
+    error: 'Direct login is disabled. Please use Discord OAuth.'
   });
+});
 
   // Sign out / clear session
   app.post('/api/auth/logout', (req, res) => {
     res.clearCookie('flw_session', {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'none'
-    });
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+});
     res.json({ success: true });
   });
 
@@ -452,11 +407,11 @@ if (guildId && botToken) {
             );
 
             res.cookie('flw_session', sessionToken, {
-              httpOnly: true,
-              secure: true,
-              sameSite: 'none',
-              maxAge: 30 * 24 * 60 * 60 * 1000
-            });
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+  maxAge: 30 * 24 * 60 * 60 * 1000
+});
 
             // Return popup postMessage as instructed by oauth-integration skill
             res.send(`
@@ -466,7 +421,10 @@ if (guildId && botToken) {
                 <body style="background:#0b0c0e;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
                   <script>
                     if (window.opener) {
-                      window.opener.postMessage({ type: 'OAUTH_AUTH_SUCCESS', token: ${JSON.stringify(sessionToken)} }, '*');
+                      window.opener.postMessage(
+  { type: 'OAUTH_AUTH_SUCCESS' },
+  window.location.origin
+);
                       window.close();
                     } else {
                       window.location.href = '/dashboard';

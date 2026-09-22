@@ -1,11 +1,9 @@
 import { JournalTrade } from '../types';
-import { getSupabase, isSupabaseConfigured } from './supabase';
 
 const STORAGE_KEYS = {
   TRADES: 'flw_trade_journal_v1',
   CHECKLIST: 'flw_pretrade_checklist_v1',
   USER: 'flw_user_profile_v1',
-  TOKEN: 'flw_auth_token_v1',
   BOOKMARKS: 'flw_bookmarked_lessons_v1',
   STATS: 'flw_trader_stats_v1'
 };
@@ -73,52 +71,6 @@ export interface UserProfile {
   memberSince: string;
 }
 
-function getAuthHeaders(): Record<string, string> {
-  const headers: Record<string, string> = {};
-  try {
-    const token = localStorage.getItem(STORAGE_KEYS.TOKEN);
-    if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
-    }
-  } catch {
-    // Ignore localStorage access restrictions if any
-  }
-  return headers;
-}
-
-function mapDbToJournalTrade(row: any): JournalTrade {
-  return {
-    id: row.id,
-    date: row.date,
-    instrument: row.instrument,
-    setup: row.setup,
-    direction: row.direction as 'LONG' | 'SHORT',
-    entryPrice: Number(row.entry_price ?? row.entryPrice ?? 0),
-    exitPrice: Number(row.exit_price ?? row.exitPrice ?? 0),
-    pnl: Number(row.pnl ?? 0),
-    status: row.status as 'WIN' | 'LOSS' | 'BE',
-    notes: row.notes || '',
-    disciplineRating: Number(row.discipline_rating ?? row.disciplineRating ?? 10)
-  };
-}
-
-function mapJournalTradeToDb(t: JournalTrade, userId: string): any {
-  return {
-    id: t.id,
-    user_id: userId,
-    date: t.date,
-    instrument: t.instrument,
-    setup: t.setup,
-    direction: t.direction,
-    entry_price: t.entryPrice,
-    exit_price: t.exitPrice,
-    pnl: t.pnl,
-    status: t.status,
-    notes: t.notes || '',
-    discipline_rating: t.disciplineRating
-  };
-}
-
 export const StorageService = {
   // Sync Cache Helpers
   getLocalTrades(): JournalTrade[] {
@@ -151,418 +103,198 @@ export const StorageService = {
     }
   },
 
-  setAuthToken(token: string | null) {
-    try {
-      if (token) {
-        localStorage.setItem(STORAGE_KEYS.TOKEN, token);
-      } else {
-        localStorage.removeItem(STORAGE_KEYS.TOKEN);
-      }
-    } catch {
-      // ignore
-    }
-  },
-
-  getAuthToken(): string | null {
-    try {
-      return localStorage.getItem(STORAGE_KEYS.TOKEN);
-    } catch {
-      return null;
-    }
-  },
-
   // ================= Trades =================
   async getTrades(): Promise<JournalTrade[]> {
-    // 1. Try direct Supabase if configured
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const { data, error } = await client
-            .from('trades')
-            .select('*')
-            .order('created_at', { ascending: false });
-          if (!error && data && data.length > 0) {
-            const mapped = data.map(mapDbToJournalTrade);
-            try {
-              localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(mapped));
-            } catch {}
-            return mapped;
-          }
-        } catch (e) {
-          console.warn('[Supabase] Failed to fetch trades, trying REST API:', e);
-        }
-      }
-    }
-
-    // 2. Try REST API endpoint
     try {
       const res = await fetch('/api/trades', {
-        credentials: 'include',
-        headers: getAuthHeaders()
+        method: 'GET',
+        credentials: 'include'
       });
+
       if (res.ok) {
         const data = await res.json();
-        if (data.trades && Array.isArray(data.trades)) {
-          try {
-            localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(data.trades));
-          } catch {}
-          return data.trades;
-        }
+        const trades = Array.isArray(data.trades) ? data.trades : [];
+        try {
+          localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(trades));
+        } catch {}
+        return trades;
+      }
+
+      if (res.status === 401) {
+        return [];
       }
     } catch (err) {
-      console.warn('Network error fetching trades from API, using fallback cache:', err);
+      console.warn('API getTrades failed:', err);
     }
 
-    // 3. Fallback to LocalStorage
     return this.getLocalTrades();
   },
 
   async saveTrades(trades: JournalTrade[]): Promise<void> {
-    try {
-      localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(trades));
-    } catch (e) {
-      console.error('Failed to save trades to local cache', e);
+    const res = await fetch('/api/trades', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ trades })
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to save trades');
     }
 
-    // Direct Supabase sync
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const user = this.getLocalUser();
-          const userId = user?.email || 'usr_claudio';
-          const dbRows = trades.map(t => mapJournalTradeToDb(t, userId));
-          await client.from('trades').upsert(dbRows, { onConflict: 'id' });
-        } catch (err) {
-          console.warn('[Supabase] Failed to save trades:', err);
-        }
-      }
-    }
-
-    // Express backend sync
-    try {
-      await fetch('/api/trades', {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-          ...getAuthHeaders()
-        },
-        body: JSON.stringify({ trades })
-      });
-    } catch (err) {
-      console.warn('Failed to sync saved trades to server:', err);
-    }
-  },
-
-  async addTrade(trade: JournalTrade): Promise<JournalTrade[]> {
-    const current = this.getLocalTrades();
-    const trades = [trade, ...current.filter(t => t.id !== trade.id)];
     try {
       localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(trades));
     } catch {}
+  },
 
-    // Direct Supabase sync
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const user = this.getLocalUser();
-          const userId = user?.email || 'usr_claudio';
-          await client.from('trades').upsert(mapJournalTradeToDb(trade, userId), { onConflict: 'id' });
-        } catch (err) {
-          console.warn('[Supabase] Failed to insert trade:', err);
-        }
-      }
+  async addTrade(trade: JournalTrade): Promise<JournalTrade[]> {
+    const res = await fetch('/api/trades', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ trade })
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to save trade');
     }
 
-    // Express backend sync
+    const data = await res.json();
+    const trades = Array.isArray(data.trades) ? data.trades : [];
+
     try {
-      const res = await fetch('/api/trades', {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-          ...getAuthHeaders()
-        },
-        body: JSON.stringify({ trade })
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.trades) {
-          try {
-            localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(data.trades));
-          } catch {}
-          return data.trades;
-        }
-      }
-    } catch (err) {
-      console.warn('Failed to send trade to server:', err);
-    }
+      localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(trades));
+    } catch {}
 
     return trades;
   },
 
   async deleteTrade(tradeId: string): Promise<JournalTrade[]> {
-    const current = this.getLocalTrades();
-    const trades = current.filter(t => t.id !== tradeId);
+    const res = await fetch(`/api/trades/${encodeURIComponent(tradeId)}`, {
+      method: 'DELETE',
+      credentials: 'include'
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to delete trade');
+    }
+
+    const trades = this.getLocalTrades().filter(t => t.id !== tradeId);
+
     try {
       localStorage.setItem(STORAGE_KEYS.TRADES, JSON.stringify(trades));
     } catch {}
-
-    // Direct Supabase delete
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          await client.from('trades').delete().eq('id', tradeId);
-        } catch (err) {
-          console.warn('[Supabase] Failed to delete trade:', err);
-        }
-      }
-    }
-
-    // Express backend delete
-    try {
-      await fetch(`/api/trades/${encodeURIComponent(tradeId)}`, {
-        method: 'DELETE',
-        credentials: 'include',
-        headers: getAuthHeaders()
-      });
-    } catch (err) {
-      console.warn('Failed to delete trade on server:', err);
-    }
 
     return trades;
   },
 
   // ================= Checklist =================
   async getChecklist(): Promise<typeof INITIAL_CHECKLIST_ITEMS> {
-    // 1. Try direct Supabase
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const { data, error } = await client
-            .from('checklist_items')
-            .select('*')
-            .order('id', { ascending: true });
-          if (!error && data && data.length > 0) {
-            const mapped = data.map((row: any) => ({
-              id: row.id,
-              category: row.category,
-              label: row.label,
-              checked: Boolean(row.checked)
-            }));
-            try {
-              localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(mapped));
-            } catch {}
-            return mapped;
-          }
-        } catch (err) {
-          console.warn('[Supabase] Failed to get checklist:', err);
-        }
-      }
-    }
-
-    // 2. Try REST API
     try {
       const res = await fetch('/api/checklist', {
-        credentials: 'include',
-        headers: getAuthHeaders()
+        method: 'GET',
+        credentials: 'include'
       });
+
       if (res.ok) {
         const data = await res.json();
-        if (data.checklist && Array.isArray(data.checklist)) {
-          try {
-            localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(data.checklist));
-          } catch {}
-          return data.checklist;
-        }
+        const checklist = Array.isArray(data.checklist) ? data.checklist : [];
+        try {
+          localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(checklist));
+        } catch {}
+        return checklist;
+      }
+
+      if (res.status === 401) {
+        return [];
       }
     } catch (err) {
-      console.warn('Network error fetching checklist, using fallback cache:', err);
+      console.warn('API getChecklist failed:', err);
     }
 
-    // 3. Fallback
     return this.getLocalChecklist();
   },
 
   async saveChecklist(items: typeof INITIAL_CHECKLIST_ITEMS): Promise<void> {
+    const res = await fetch('/api/checklist', {
+      method: 'PUT',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items })
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to save checklist');
+    }
+
     try {
       localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(items));
-    } catch (e) {
-      console.error('Failed to save checklist to local cache', e);
-    }
-
-    // Direct Supabase sync
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const user = this.getLocalUser();
-          const userId = user?.email || 'usr_claudio';
-          const dbRows = items.map(it => ({
-            id: it.id,
-            user_id: userId,
-            category: it.category,
-            label: it.label,
-            checked: it.checked
-          }));
-          await client.from('checklist_items').upsert(dbRows, { onConflict: 'user_id,id' });
-        } catch (err) {
-          console.warn('[Supabase] Failed to save checklist:', err);
-        }
-      }
-    }
-
-    // Express backend sync
-    try {
-      await fetch('/api/checklist', {
-        method: 'PUT',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-          ...getAuthHeaders()
-        },
-        body: JSON.stringify({ items })
-      });
-    } catch (err) {
-      console.warn('Failed to sync checklist to server:', err);
-    }
+    } catch {}
   },
 
   // ================= User Profile =================
   async getUser(): Promise<UserProfile | null> {
-    // 1. Try Supabase session / table
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          const { data: authData } = await client.auth.getSession();
-          if (authData.session?.user) {
-            const u = authData.session.user;
-            const { data: profData } = await client.from('users').select('*').eq('id', u.id).single();
-            if (profData) {
-              const profile: UserProfile = {
-                name: profData.name || u.email?.split('@')[0] || 'Trader',
-                email: profData.email || u.email || '',
-                accountEquity: Number(profData.account_equity || 50000),
-                riskPercent: Number(profData.risk_percent || 1.0),
-                preferredInstrument: profData.preferred_instrument || 'NQ',
-                propFirmCode: profData.prop_firm_code || 'CLAUDIO',
-                isLoggedIn: true,
-                memberSince: profData.member_since || 'Sep 2026'
-              };
-              try {
-                localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(profile));
-              } catch {}
-              return profile;
-            }
-          }
-        } catch (e) {
-          console.warn('[Supabase] Error getting user:', e);
-        }
-      }
-    }
-
-    // 2. Try REST API endpoint
     try {
       const res = await fetch('/api/auth/me', {
-        credentials: 'include',
-        headers: getAuthHeaders()
+        method: 'GET',
+        credentials: 'include'
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.user) {
-          try {
-            localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(data.user));
-          } catch {}
-          return data.user;
-        }
-      } else if (res.status === 401) {
-        // Explicitly unauthenticated
+
+      if (res.status === 401) {
         try {
           localStorage.removeItem(STORAGE_KEYS.USER);
-          localStorage.removeItem(STORAGE_KEYS.TOKEN);
         } catch {}
         return null;
       }
+
+      if (!res.ok) {
+        throw new Error('Failed to verify session');
+      }
+
+      const data = await res.json();
+      if (!data.user) {
+        return null;
+      }
+
+      try {
+        localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(data.user));
+      } catch {}
+
+      return data.user;
     } catch (err) {
-      console.warn('Error verifying session from server:', err);
+      console.warn('Server session check failed:', err);
+      return this.getLocalUser();
     }
-    return this.getLocalUser();
   },
 
   async saveUser(user: UserProfile): Promise<void> {
+    const res = await fetch('/api/profile', {
+      method: 'PUT',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user)
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to save user profile');
+    }
+
     try {
       localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(user));
-    } catch (e) {
-      console.error('Failed to save user in local cache', e);
-    }
-
-    // Supabase update
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          await client.from('users').upsert({
-            id: user.email,
-            name: user.name,
-            email: user.email,
-            account_equity: user.accountEquity,
-            risk_percent: user.riskPercent,
-            preferred_instrument: user.preferredInstrument,
-            prop_firm_code: user.propFirmCode,
-            member_since: user.memberSince
-          }, { onConflict: 'id' });
-        } catch (err) {
-          console.warn('[Supabase] Failed to update user:', err);
-        }
-      }
-    }
-
-    // Express update
-    try {
-      await fetch('/api/profile', {
-        method: 'PUT',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-          ...getAuthHeaders()
-        },
-        body: JSON.stringify(user)
-      });
-    } catch (err) {
-      console.warn('Failed to update user profile on server:', err);
-    }
+    } catch {}
   },
 
   async clearUser(): Promise<void> {
     try {
       localStorage.removeItem(STORAGE_KEYS.USER);
-      localStorage.removeItem(STORAGE_KEYS.TOKEN);
     } catch (e) {
       console.error('Failed to clear local user cache', e);
-    }
-
-    if (isSupabaseConfigured()) {
-      const client = getSupabase();
-      if (client) {
-        try {
-          await client.auth.signOut();
-        } catch (err) {
-          console.warn('[Supabase] Sign out error:', err);
-        }
-      }
     }
 
     try {
       await fetch('/api/auth/logout', {
         method: 'POST',
-        credentials: 'include',
-        headers: getAuthHeaders()
+        credentials: 'include'
       });
     } catch (err) {
       console.warn('Failed to call logout on server:', err);
