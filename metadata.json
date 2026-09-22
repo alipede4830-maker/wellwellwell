@@ -1,0 +1,6 @@
+{
+  "name": "FLW - Professional Orderflow Education",
+  "description": "Learn to read what most traders never see. Auction Market Theory, Volume Profile, and DOM trading education.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

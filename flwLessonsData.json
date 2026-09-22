@@ -1,0 +1,1177 @@
+[
+  {
+    "slug": "software",
+    "phase": "Phase 01",
+    "phaseNum": "01",
+    "phaseTitle": "Software Setup",
+    "category": "Software Setup",
+    "title": "Trading Software",
+    "subtitle": "Compare and pick the right orderflow trading platform before you start.",
+    "readTime": "3 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "quick-pick-guide",
+        "title": "Quick Pick Guide",
+        "level": 2
+      },
+      {
+        "id": "recommended",
+        "title": "Recommended",
+        "level": 2
+      },
+      {
+        "id": "specialized-tools",
+        "title": "Specialized Tools",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"quick-pick-guide\"></span>\n## Quick Pick Guide\n Just starting out? Quantower or ATAS Modern UI, free tiers, good defaults Going professional? Sierra Chart Performance, Denali feed, industry standard Heatmap focused? Bookmap or Deepcharts Unmatched liquidity visualization Mac user? MotiveWave Only native Mac option with OF tools Crypto only? Exocharts Purpose-built for perps & OI Depth of Market focused? Jigsaw Trading Elite depth-of-market tools \n\n<span id=\"recommended\"></span>\n## Recommended\n Quantower Modern & Modular \n\nA modern, multi-asset trading platform with a highly customizable interface. Great for beginners who want a clean UI without sacrificing depth.\n\nBest all-rounder for getting started.\n\n#### Pros\n\n- + Modern UI\n- + Great API & Plugin System\n- + Free Version Available\n- + Crypto + Futures Support\n- + Active Development \n\n#### Cons\n\n- − Newer ecosystem\n- − Can be resource heavy\n- − Some features behind paywall [Visit Quantower](https://www.quantower.com/) ATAS Flow Focused \n\nAdvanced Time And Sales. Built specifically for order flow analysis with the best out-of-the-box footprint charts and cluster visualization.\n\nBest dedicated orderflow platform.\n\n#### Pros\n\n- + Best stock footprints\n- + Intuitive flow tools\n- + Crypto & Futures\n- + Great for beginners \n\n#### Cons\n\n- − Expensive lifetime license\n- − Windows only\n- − UI can feel cluttered [Visit ATAS](https://atas.net/) MotiveWave Mac Friendly \n\nJava-based platform originally known for Elliott Wave tools, but with surprisingly robust orderflow features including footprint charts and replay mode.\n\nBest option for Mac users.\n\n#### Pros\n\n- + Native Mac support\n- + Very stable\n- + Great replay mode\n- + All-in-one solution \n\n#### Cons\n\n- − Java UI can feel sluggish\n- − Level 2 data requires higher tier\n- − Pricey for full suite [Visit MotiveWave](https://www.motivewave.com/) Sierra Chart The Gold Standard \n\nThe choice of professional prop traders. Unmatched performance, zero lag, and near-infinite customization, provided you can tame it.\n\nBest for serious professionals. The endgame.\n\n#### Pros\n\n- + Zero lag performance\n- + Infinite customization\n- + Denali feed (cheap & fast)\n- + TPO & DOM are top tier\n- + Industry standard \n\n#### Cons\n\n- − Steep learning curve\n- − Old school UI\n- − Complex initial setup [Visit Sierra Chart](https://www.sierrachart.com/) \n\n<span id=\"specialized-tools\"></span>\n## Specialized Tools\n Bookmap Liquidity Heatmap \n\nThe pioneer of real-time liquidity heatmap visualization. Shows the full depth of the order book over time, making spoofing and iceberg orders visible at a glance.\n\n#### Pros\n\n- + Unmatched heatmap visualization\n- + Great for DOM analysis\n- + Crypto & Futures\n- + Web version available \n\n#### Cons\n\n- − Expensive subscription\n- − Limited footprint tools\n- − Narrow focus \n\nBest for pure heatmap / DOM traders.\n\n[Visit Bookmap](https://bookmap.com/) Deepcharts Next-Gen Heatmaps \n\nA newer platform focused on advanced heatmap and market depth visualization. Rapidly gaining traction for its clean, modern approach to showing liquidity.\n\n#### Pros\n\n- + Modern heatmap engine\n- + Clean interface\n- + Lightweight & fast\n- + Growing feature set \n\n#### Cons\n\n- − Newer, smaller community\n- − Limited non-heatmap tools\n- − Still evolving \n\nUp-and-coming heatmap alternative.\n\n[Visit Deepcharts](https://deepcharts.com/) Exocharts Crypto Native \n\nPurpose-built for crypto orderflow analysis. Provides footprint charts, volume profile, CVD, and open interest tools tailored to perpetual futures markets.\n\n#### Pros\n\n- + Built for crypto markets\n- + Clean footprint charts\n- + Affordable\n- + Open interest tools \n\n#### Cons\n\n- − Crypto only. No futures or equities\n- − Smaller team\n- − Limited advanced features \n\nBest for crypto-only traders.\n\n[Visit Exocharts](https://exocharts.com/) Jigsaw Trading DOM Specialist \n\nFocused on DOM (Depth of Market) trading with their proprietary Daytradr platform. Known for excellent trade execution tools and order flow education.\n\n#### Pros\n\n- + Elite DOM tools\n- + Great education included\n- + Trade execution focus\n- + Replay & practice mode \n\n#### Cons\n\n- − Narrow scope, DOM focused\n- − Requires NinjaTrader or standalone\n- − Learning curve for Daytradr \n\nBest for pure DOM tape reading.\n\n[Visit Jigsaw Trading](https://www.jigsawtrading.com/) \n\nNote: We are not affiliated with any of these platforms. This comparison is based on our own experience and community feedback. Most platforms offer free trials, so test before you commit. The \"best\" platform is the one you actually learn to use well.",
+    "quizQuestions": null
+  },
+  {
+    "slug": "amt",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Auction Market Theory",
+    "subtitle": "The immutable mechanics and universal principles of how financial markets seek fair value.",
+    "readTime": "16 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "what-is-auction-market-theory",
+        "title": "What is Auction Market Theory?",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "understanding-fair-value",
+        "title": "Understanding Fair Value",
+        "level": 3
+      },
+      {
+        "id": "the-auction-cycle",
+        "title": "The Auction Cycle",
+        "level": 3
+      },
+      {
+        "id": "key-components-of-amt",
+        "title": "Key Components of AMT",
+        "level": 2
+      },
+      {
+        "id": "balanced-auction-ranging-market",
+        "title": "Balanced Auction ➥ Ranging Market",
+        "level": 3
+      },
+      {
+        "id": "imbalanced-auction-trending-market",
+        "title": "Imbalanced Auction ➥ Trending Market",
+        "level": 3
+      },
+      {
+        "id": "market-auctions-conclusion",
+        "title": "Market Auctions ➥ Conclusion",
+        "level": 3
+      },
+      {
+        "id": "visualizing-of-amt",
+        "title": "Visualizing of AMT",
+        "level": 2
+      },
+      {
+        "id": "eyeballing-candlesticks",
+        "title": "Eyeballing ➥ Candlesticks",
+        "level": 3
+      },
+      {
+        "id": "volume-profile",
+        "title": "Volume Profile",
+        "level": 3
+      },
+      {
+        "id": "time-price-opportunity",
+        "title": "Time Price Opportunity",
+        "level": 3
+      },
+      {
+        "id": "visualizing-of-amt-conclusion",
+        "title": "Visualizing of AMT ➥ Conclusion",
+        "level": 3
+      },
+      {
+        "id": "how-the-auction-unfolds",
+        "title": "How the Auction Unfolds",
+        "level": 2
+      },
+      {
+        "id": "acceptance-of-value",
+        "title": "Acceptance of Value",
+        "level": 3
+      },
+      {
+        "id": "rejection-of-value-failed-auction",
+        "title": "Rejection of Value ➥ Failed Auction",
+        "level": 3
+      },
+      {
+        "id": "amt-scenarios",
+        "title": "AMT Scenarios",
+        "level": 3
+      },
+      {
+        "id": "amt-probabilities",
+        "title": "AMT Probabilities",
+        "level": 3
+      },
+      {
+        "id": "example",
+        "title": "Example",
+        "level": 2
+      },
+      {
+        "id": "example-schematic",
+        "title": "Example ➥ Schematic",
+        "level": 3
+      },
+      {
+        "id": "example-trade",
+        "title": "Example ➥ Trade",
+        "level": 3
+      },
+      {
+        "id": "youtube-videos",
+        "title": "YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"what-is-auction-market-theory\"></span>\n## What is Auction Market Theory?\n<span id=\"definition\"></span>\n### Definition\nAuction Market Theory (AMT) is a framework for understanding how financial markets operate at their most basic level. It explains how markets seek fair value through the continuous interaction of buyers and sellers. AMT is not a trading strategy, but a lens through which market behavior can be observed and understood. From this perspective, financial markets move higher or lower as a result of imbalances in buyer and seller aggression, often driven by market events, until price reaches a level where that aggression becomes balanced and the greatest amount of trade can occur. This level of balance represents fair value.\n\n<span id=\"understanding-fair-value\"></span>\n### Understanding Fair Value\nFair Value Distribution • Source: orderflw.com\n\nFair value refers to the price area that facilitates the greatest amount of trade between market participants. At fair value, buyer and seller aggression are closely balanced, resulting in price trading within a relatively tight range while volume remains elevated. When a market is trading at fair value, it is considered to be in a state of balance.\n\nWithin the Market Profile framework, traditionalists define fair value as the area containing approximately 70% of a session’s total volume, rather than the statistically derived 68.2%. The point of control serves as the mean of this value area and represents the price level where the highest level of trading activity occurred.\n\nPrices that trade above or below this high-volume fair value area are considered “unfair” prices, as they reflect levels where participation is reduced and the market is not efficiently facilitating trade or accurately reflecting the security’s true value.\n\n<span id=\"the-auction-cycle\"></span>\n### The Auction Cycle\nThe Auction Cycle • Source: jumpstarttrading.com\n\nThe auction cycle describes how financial markets continuously transition between balance and imbalance as they seek fair value. When price is trading within a fair value area, buyers and sellers are largely in agreement on price. In this balanced state, participation is high, volume is elevated, and the market efficiently facilitates trade. Price typically remains range-bound as the greatest amount of trading activity occurs.\n\nThis balance can be disrupted by a market event or a shift in participant behavior, creating an imbalance between supply and demand. As buyer or seller aggression begins to dominate, price moves directionally away from the established fair value area. During this phase, some participants withdraw as price no longer represents fair value to them, leaving only more aggressive buyers or sellers willing to transact at increasingly higher or lower prices.\n\nAs price moves further away from fair value, the market enters a discovery phase. In discovery, the auction is searching for the next price level where participation can increase and balance can be restored. Volume typically declines as price explores areas of lower acceptance. Once the auction reaches an extreme, where participation is minimal, the market begins to rotate back toward prior areas of balance. Historically, this rebalancing process results in a high probability, often referenced as approximately 80%, that price will revisit the previous value area. The logic behind this tendency is explained later.\n\nWhen buyer and seller aggression once again align and participation increases, a new fair value area is established. At this point, the market has completed one full auction cycle and returned to an efficient, balanced state. This cycle repeats continuously as markets respond to new information and changing participant behavior.\n\n<span id=\"key-components-of-amt\"></span>\n## Key Components of AMT\n<span id=\"balanced-auction-ranging-market\"></span>\n### Balanced Auction ➥ Ranging Market\nBalanced Auction • Source: orderflw.com\n\nA Balanced Auction describes a market environment in which price is being actively accepted by participants over time. In this condition, the market is not attempting to move price higher or lower, but instead focuses on facilitating trade at currently accepted levels. The defining characteristic of a balanced auction is sustained two-sided activity, where both buyers and sellers are willing to transact without requiring meaningful price movement.\n\nBalanced auctions often develop after the market has completed a phase of price discovery. Once directional activity subsides and aggressive participants withdraw, the remaining participants transact around prices they collectively perceive as acceptable. This results in stable market behavior, where price movement is driven more by time and participation than by directional intent.\n\nFrom an analytical perspective, balanced auctions are important because they establish reference areas. These areas provide context for future market activity, as they represent zones of prior agreement. When price later returns to a previously balanced area, the market will often either accept or reject these levels based on prior participation. Because of this clear behavioral response, balanced areas frequently provide high-quality reference points for generating trade ideas.\n\nBalanced auctions also play a key role in risk definition. Because price movement is rotational and bounded, market behavior becomes more structured and predictable in terms of range. This makes balanced conditions especially useful for understanding where initiative activity may begin if balance is disrupted.\n\nWhile a balanced auction reflects market agreement, it is inherently temporary. Markets remain balanced only until new information, shifting expectations, or renewed participation creates sufficient pressure to move price away from acceptance and initiate a new auction phase.\n\n<span id=\"imbalanced-auction-trending-market\"></span>\n### Imbalanced Auction ➥ Trending Market\nImbalanced Auction • Source: orderflw.com\n\nAn Imbalanced Auction describes a market environment in which price is no longer being efficiently accepted and one side of the market becomes dominant. In this condition, the market is not focused on facilitating trade, but on moving price in order to resolve disagreement. Participation becomes uneven as aggressive buyers or sellers are willing to transact at increasingly higher or lower prices.\n\nImbalanced auctions typically emerge when new information, shifting expectations, or strong initiative activity enters the market. As price moves away from prior areas of acceptance, participation thins and transactions occur at fewer price levels. This behavior reflects urgency rather than agreement, with market participants prioritizing execution over price efficiency.\n\nFrom an analytical perspective, imbalanced auctions are important because they redefine value. The directional movement establishes new reference levels and exposes areas where the market has little prior acceptance. These zones often act as decision points in future trading, as price may either continue through them with little resistance or react sharply when participation reappears. During trending market conditions, traders typically focus on aligning with the prevailing direction of the auction, as following the trend reflects the dominant market intent until balance begins to return.\n\nImbalanced conditions also offer insight into market intent. Sustained directional movement suggests that the market is actively searching for a new area of balance. When price begins to slow, rotate, or attract increased participation, it often signals that the imbalance is weakening and a transition toward balance may be underway.\n\nAlthough imbalanced auctions can persist for extended periods, they are not permanent. Once urgency diminishes and participation broadens, the market naturally shifts back toward a more balanced state, completing the auction process and setting the stage for the next cycle.\n\n<span id=\"market-auctions-conclusion\"></span>\n### Market Auctions ➥ Conclusion\nMarket Cycle Structure • Source: orderflw.com\n\nUnderstanding market auctions begins with identifying whether the market is operating in balance or imbalance, as each condition reflects a different phase of the auction process. Traders must first determine whether price is being accepted or whether the market is actively searching for new value, since behavior, participation, and intent vary significantly between these states. This contextual understanding forms the foundation for effective market analysis. In terms of AMT, the market is always cycling from balance to imbalance to balance to imbalance to balance, and so on. In the following sections, we will explore different Auction Market Theory scenarios to demonstrate how these auction conditions unfold in practice.\n\n<span id=\"visualizing-of-amt\"></span>\n## Visualizing of AMT\n<span id=\"eyeballing-candlesticks\"></span>\n### Eyeballing ➥ Candlesticks\nEyeballing AMT • Source: orderflw.com\n\n“Eyeballing” Auction Market Theory refers to visually assessing market behavior, often using candlestick charts, without applying real market profiles such as Time Price Oppurtunity or Volume Profile. This approach can be useful for developing an initial sense of market context, such as whether price appears rotational or directional, or whether recent movement suggests balance or imbalance.\n\nFor newer traders, eyeballing can help build intuition and improve familiarity with price behavior. It encourages observation of market structure, tempo, and general participation, which are foundational skills in understanding auctions. In some situations, a quick visual assessment may also provide a high-level overview of current market conditions.\n\nHowever, relying solely on visual interpretation has significant limitations. Without objective reference points, such as clearly defined value areas or acceptance and rejection levels, subjective bias can easily influence conclusions. What appears balanced or trending at first glance may not accurately reflect underlying market participation. As a result, eyeballing often leads to inconsistent analysis and makes it difficult to distinguish meaningful auction behavior from noise.\n\nWhile visual observation can complement Auction Market Theory, it should not replace structured analysis. AMT is most effective when supported by objective data that defines balance, imbalance, and participation. Eyeballing may offer a starting point, but without deeper context, it provides an incomplete and potentially misleading view of the auction process.\n\n<span id=\"volume-profile\"></span>\n### Volume Profile\nVolume Profile AMT • Source: orderflw.com\n\nVolume Profile provides a structured and highly effective way to visualize Auction Market Theory by organizing traded volume across price levels. Rather than focusing solely on price movement, it reveals where the market has facilitated the most volume and where participation has been limited. This makes Volume Profile particularly well suited for identifying fair value, balance, and areas of price acceptance or rejection.\n\nBy aggregating volume over a defined number of price increments (ticks), Volume Profile highlights how market participants interact with price. Areas within value naturally accumulate higher volume, as buyers and sellers are in agreement and able to transact efficiently. Outside of value, participation decreases, volume thins, and price tends to move more quickly due to reduced agreement between buyers and sellers.\n\nHigh Volume Nodes (HVNs) represent price areas where a significant amount of volume has previously been traded and therefore reflect fair value. These zones form when the market spends time facilitating trade at prices broadly accepted by participants. Because HVNs are derived from sustained participation, they serve as important reference areas within the auction process. When the market revisits a high-volume node, price often responds by either accepting the area, leading to rotation and balance, or rejecting it and returning to discovery.\n\nIn contrast, Low Volume Nodes (LVNs) highlight price areas where little volume has been traded, indicating a lack of agreement between buyers and sellers. These zones typically form during imbalanced auctions, when price moves rapidly through levels in search of participation. LVNs visually represent areas of rejection and often separate regions of balance. When revisited, they tend to act as areas of fast price movement, reflecting the market’s tendency to move quickly through prices where acceptance has previously been low.\n\nBeyond HVNs and LVNs, Volume Profile establishes additional objective reference points such as value areas and points of control. Together, these levels create a consistent framework for analyzing how the market interacts with value and transitions between balanced and imbalanced conditions. Because all of these references are derived directly from traded volume, they align closely with the core principles of Auction Market Theory.\n\nOverall, Volume Profile serves as a powerful visualization of the auction process. It brings clarity, structure, and precision to market analysis, helping to explain how price moves, where value is formed, and how markets alternate between balance and discovery.\n\n [Explore Volume Profile→](/education/volume-profile) \n\n<span id=\"time-price-opportunity\"></span>\n### Time Price Opportunity\nTime Price Opportunity AMT • Source: orderflw.com\n\nTime Price Opportunity (TPO) provides a structured way to visualize Auction Market Theory by organizing market activity based on time spent at price rather than traded volume. Instead of highlighting where the most volume occurred, TPO reveals where the market accepted price long enough to facilitate repeated trading, offering insight into areas of agreement and disagreement among participants.\n\nBy aggregating price activity over fixed time intervals, TPO illustrates how the market interacts with price throughout the session. Areas where price remains for extended periods reflect acceptance and balance, while prices visited briefly indicate rejection. This allows traders to objectively assess whether the market is operating in balance or actively moving through price in search of new value.\n\nIn TPO-based analysis, high TPO counts represent price areas where the market spent considerable time, indicating strong acceptance and prior value. These areas often form around the center of the distribution and serve as important reference points within the auction. When the market revisits such areas, price frequently slows or rotates as participants re-engage at levels that were previously accepted.\n\nIn contrast, low TPO areas highlight prices where the market spent little time, reflecting rapid movement and limited agreement. These zones typically form during imbalanced auctions, when price moves quickly in response to initiative activity. Low TPO areas visually separate regions of balance and often act as areas of swift price movement when revisited, as the market tends to reject prices that were not previously accepted.\n\nBeyond individual TPO levels, the overall TPO distribution establishes additional reference points such as value areas and points of control. Together, these elements provide a consistent framework for analyzing how the market transitions between balance and imbalance. Because TPO is based on time rather than volume, it offers a complementary perspective on the auction process while remaining fully aligned with the principles of Auction Market Theory.\n\nOverall, Time Price Opportunity serves as a powerful visualization of market acceptance and rejection. It brings structure and clarity to auction analysis by showing where price was accepted over time and where it was not, helping traders better understand how markets move between balance and discovery.\n\nMore detailed information on TPO concepts and applications can be found in the Market Profile section.\n\n [Explore Market Profile→](/education/tpo) \n\n<span id=\"visualizing-of-amt-conclusion\"></span>\n### Visualizing of AMT ➥ Conclusion\nAuction Market Theory can be interpreted through several visualization methods, each offering a different level of clarity and structure.\n\nEyeballing price action provides a fast and intuitive overview of market behavior, allowing traders to sense balance, imbalance, and momentum directly from price movement. While useful for developing market feel, this approach remains subjective and lacks precise reference levels.\n\nVolume Profile introduces a more objective framework by organizing traded volume across price levels. It clearly reveals where the market has accepted price, where value has formed, and where imbalances have occurred. High-volume and low-volume areas provide reliable reference points that align closely with the core principles of AMT, making it easier to assess market state and anticipate potential responses.\n\nTime Price Opportunity adds another layer of structure by emphasizing time spent at price rather than volume. This perspective helps visualize how long the market has accepted certain prices, offering deeper insight into market development, balance, and value distribution.\n\nTogether, these visualization methods allow traders to progressively refine their understanding of the auction process. By combining intuition with objective market structure, traders can more effectively identify whether the market is balanced or imbalanced and how price is interacting with value as the auction evolves.\n\n<span id=\"how-the-auction-unfolds\"></span>\n## How the Auction Unfolds\n<span id=\"acceptance-of-value\"></span>\n### Acceptance of Value\nAcceptance of Value • Source: orderflw.com\n\nAcceptance 80% Rule • Source: orderflw.com\n\nAcceptance of value describes a condition in which the market recognizes a price area as fair, often prior value or former balance areas where agreement previously existed, and is willing to conduct business there by accepting price back into balance. When value is accepted, both buyers and sellers actively participate, resulting in increased volume and rotational price behavior.\n\nIn the first illustration, price departs from a prior value area and moves into a new price zone. After a period of imbalance, participation increases and price begins to rotate and balance within this new region. This behavior indicates that the market has discovered a new level where buyers and sellers agree on price, leading to the formation of a new value area. Price then rotates back toward the prior value area and is accepted into it.\n\nThe second illustration highlights the commonly referenced 80% rule within Auction Market Theory. When price briefly dips outside of an established value area but fails to attract sustained participation, acceptance returns. As a result, price rotates back into value and, historically, has a high probability of traversing the value area toward the opposite side.\n\n<span id=\"rejection-of-value-failed-auction\"></span>\n### Rejection of Value ➥ Failed Auction\nRejection of Value • Source: orderflw.com\n\nRejection of value occurs when the market tests a price area but fails to attract sufficient participation to sustain trade at that level. Unlike acceptance, rejection signals disagreement among market participants, resulting in swift directional movement away from the tested prices. These areas are typically associated with low participation and inefficient trade.\n\nIn the illustration, price transitions from a prior value area into a new value region, where balance is temporarily established. As the market later revisits the prior value area, participation fails to increase and price is unable to rotate or stabilize. This lack of acceptance leads to rejection, with price moving quickly away from the area.\n\nRejection often results in sharp, directional movement as the auction searches for prices where agreement can be restored. These rejected zones frequently become important reference levels in future trading, as the market tends to respond decisively when they are approached again.\n\n<span id=\"amt-scenarios\"></span>\n### AMT Scenarios\nAMT Scenarios • Source: orderflw.com\n\n<span id=\"amt-probabilities\"></span>\n### AMT Probabilities\nMarkets are balanced approximately 70-80% of the time, making balance the most common market condition. As a result, when price reaches the extremes of an established value area, it is statistically more likely to remain within balance and rotate rather than immediately break out. However, these probabilities are dynamic and can change when new information or strong initiative activity appears. For this reason, balance expectations should always be validated with real-time participation and volume behavior.\n\nWhen balance breaks and price moves outside of value, the auction enters a new decision phase. At this point, the immediate probabilities tend to split more evenly, with roughly a 50/50 chance of continuation in the breakout direction or rotation back into value.\n\nIf price returns and accepts back into value, the probabilities shift again. There is approximately a 20% chance the market will simply range and build additional volume within value (a failed auction), and an approximately 80% probability that price will rotate through value toward the opposite end of balance, completing the auction.\n\n<span id=\"example\"></span>\n## Example\n<span id=\"example-schematic\"></span>\n### Example ➥ Schematic\nAuction Schematic • Source: orderflw.com\n\n<span id=\"example-trade\"></span>\n### Example ➥ Trade\nAuction Trade • Source: orderflw.com\n\n<span id=\"youtube-videos\"></span>\n## YouTube Videos\nThe Basics of Auction Theory\n\nUnderstanding Balance & Imbalance\n\nTrading the Auction Process\n\n Interactive: The Auction Cycle \n\nClick the buttons below the chart to see how markets move from balance to imbalance and back again.\n\n Balance POC Initiative Imbalance New Balance Responsive Rejection \n\nClick a button below the chart to understand the full auction cycle.\n\n Test Your Knowledge 1 / 5 \n\nWhat does Auction Market Theory primarily describe?\n\n A A specific trading strategy for futures B How markets seek fair value through buyer-seller interaction C A method for calculating moving averages D The regulatory framework of financial markets Discussion [Curriculum Index](/education)",
+    "quizQuestions": [
+      {
+        "question": "What does Auction Market Theory primarily describe?",
+        "options": [
+          "A specific trading strategy for futures",
+          "How markets seek fair value through buyer-seller interaction",
+          "A method for calculating moving averages",
+          "The regulatory framework of financial markets"
+        ],
+        "correct": 1,
+        "explanation": "AMT is a framework for understanding how markets operate at their most basic level, seeking fair value through the continuous interaction of buyers and sellers."
+      },
+      {
+        "question": "What is 'fair value' in the context of AMT?",
+        "options": [
+          "The opening price of the session",
+          "The price area that facilitates the greatest amount of trade",
+          "The highest price reached during the day",
+          "The price set by market makers"
+        ],
+        "correct": 1,
+        "explanation": "Fair value is the price area where buyer and seller aggression are balanced and the greatest amount of trade occurs between participants."
+      },
+      {
+        "question": "What characterizes a balanced auction?",
+        "options": [
+          "Price moving sharply in one direction",
+          "Low volume and wide spreads",
+          "Sustained two-sided activity with rotational price behavior",
+          "A market that is closed for trading"
+        ],
+        "correct": 2,
+        "explanation": "A balanced auction features sustained two-sided activity where both buyers and sellers transact without requiring meaningful price movement. Price rotates within a range."
+      },
+      {
+        "question": "What is the difference between initiative and responsive activity?",
+        "options": [
+          "Initiative activity happens at the open, responsive happens at the close",
+          "Initiative activity moves price away from value, responsive activity moves it back toward value",
+          "They are the same thing",
+          "Initiative is buying, responsive is selling"
+        ],
+        "correct": 1,
+        "explanation": "Initiative activity drives price away from established value into new territory. Responsive activity brings price back toward known value areas. Understanding which type is dominant helps identify whether the market is trending or balancing."
+      },
+      {
+        "question": "According to AMT, what is the approximate probability that price will revisit a previous value area after departing it?",
+        "options": [
+          "50%",
+          "60%",
+          "70%",
+          "80%"
+        ],
+        "correct": 3,
+        "explanation": "AMT references approximately 80% probability that price will revisit the previous value area, because the market tends to rebalance at areas of prior acceptance."
+      }
+    ]
+  },
+  {
+    "slug": "volume-profile",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Volume Profile",
+    "subtitle": "Visualizing traded volume at price: Value Areas (VAH/VAL), POC, and High/Low Volume Nodes.",
+    "readTime": "7 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "what-is-volume-profile",
+        "title": "What is Volume Profile?",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "volume-profile-components",
+        "title": "Volume Profile Components",
+        "level": 2
+      },
+      {
+        "id": "overview",
+        "title": "Overview",
+        "level": 3
+      },
+      {
+        "id": "value-area",
+        "title": "Value Area",
+        "level": 3
+      },
+      {
+        "id": "high-volume-node",
+        "title": "High Volume Node",
+        "level": 3
+      },
+      {
+        "id": "low-volume-node",
+        "title": "Low Volume Node",
+        "level": 3
+      },
+      {
+        "id": "shelf-and-ledge",
+        "title": "Shelf and Ledge",
+        "level": 3
+      },
+      {
+        "id": "volume-profile-placement-methods",
+        "title": "Volume Profile Placement Methods",
+        "level": 2
+      },
+      {
+        "id": "composite-profiles",
+        "title": "Composite Profiles",
+        "level": 3
+      },
+      {
+        "id": "session-profiles",
+        "title": "Session Profiles",
+        "level": 3
+      },
+      {
+        "id": "volume-footprint",
+        "title": "Volume Footprint",
+        "level": 3
+      },
+      {
+        "id": "youtube-videos",
+        "title": "YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"what-is-volume-profile\"></span>\n## What is Volume Profile?\n<span id=\"definition\"></span>\n### Definition\nVolume Profile (VP) is a market analysis tool used to visualize where trading activity has occurred across different price levels. It organizes traded volume horizontally by price, rather than over time, revealing where the market has facilitated the most and least amount of trade. Volume Profile is not a trading strategy, but a structural framework for identifying value, balance, and participation within the auction.\n\nVolume represents the number of contracts or shares exchanged between buyers and sellers during a given period. In equity markets, volume reflects the number of shares traded, while in futures and options markets, volume is measured by the number of contracts traded. By aggregating this volume at each price level, Volume Profile highlights areas of strong agreement between participants as well as prices that were quickly rejected.\n\nFrom this perspective, high-volume price levels indicate areas of fair value, whereas low-volume areas reflect reduced participation and directional movement. Volume Profile therefore provides objective insight into how the auction has unfolded and how price is likely to behave when revisiting these levels.\n\n<span id=\"volume-profile-components\"></span>\n## Volume Profile Components\n<span id=\"overview\"></span>\n### Overview\nVolume Profile Overview • Source: jumpstarttrading.com\n\nThe illustration above shows an example of a Volume Profile. It’s important to note that not all Volume Profiles will appear identical, as their shape varies with market conditions. This example is provided for illustrative purposes and represents a classic Volume Profile structure. In the following sections, we will examine each of its components in detail.\n\n<span id=\"value-area\"></span>\n### Value Area\nVolume Profile Value Area • Source: orderflw.com\n\nThe Value Area represents the range of prices where the majority of trading activity has occurred during a given session. It reflects the zone in which buyers and sellers were most willing to transact, indicating broad agreement on price and efficient trade facilitation. When price remains within this area, market activity is typically rotational rather than directional.\n\nWithin the Market Profile and Volume Profile framework, the value area is commonly defined as the range that contains approximately 70% of the session’s total traded volume. At the center of this range is the Point of Control (POC), which marks the price level with the highest concentration of volume and serves as the market’s primary reference for value during that period.\n\nThe upper boundary of the value area is known as the Value Area High (VAH), while the lower boundary is the Value Area Low (VAL). These levels define the extremes of accepted price for the session and often act as important reference points. When price approaches VAH or VAL, the market is testing the limits of acceptance and may either rotate back toward the POC or transition into imbalance.\n\nPrices that trade outside the value area reflect levels of reduced participation, where the market has not spent sufficient time facilitating trade.\n\n<span id=\"high-volume-node\"></span>\n### High Volume Node\nHigh Volume Node • Source: orderflw.com\n\nHigh Volume Nodes (HVNs) are price areas where a significant amount of volume has been traded, indicating strong agreement between buyers and sellers. Each HVN represents a prior area of value and contains its own Point of Control (POC), which marks the price level where the most volume within that node was transacted.\n\nWhen price is trading inside an HVN, the market is typically in balance and efficiently facilitating trade. The upper and lower extremes of an HVN are especially important, as they define the limits of acceptance or rejection for that value area. From an Auction Market Theory perspective, these extremes often present high-quality decision points.\n\nThe usual Auction Market theory scenarios apply here.\n\n<span id=\"low-volume-node\"></span>\n### Low Volume Node\nLow Volume Node • Source: orderflw.com\n\nLow Volume Nodes (LVNs) are price areas where relatively little volume has been traded, indicating limited agreement between buyers and sellers. Each LVN represents a zone where the market moved through price quickly, spending minimal time facilitating trade due to a lack of acceptance.\n\nWhen price enters an LVN, the market is typically in an imbalanced state. Because participation was previously low, these areas offer little structural support or resistance. As a result, price often either rejects the level quickly or travels through the LVN rapidly until it reaches an area of higher participation.\n\nFrom an Auction Market Theory perspective, LVNs highlight inefficient auctions and often act as transition zones between areas of value. The usual AMT scenarios apply here as well, with price either continuing directionally through the LVN or reacting sharply if participation suddenly returns.\n\n<span id=\"shelf-and-ledge\"></span>\n### Shelf and Ledge\nVolume Profile Shelf • Source: orderflw.com\n\nVolume Profile Ledge • Source: orderflw.com\n\nThe points where volume begins to rise or fall off aggressively are significant in the auction. Volume Profile makes these transitions visible by showing where participation increased or decreased sharply across price levels. These shifts often mark areas that may influence future price behavior.\n\nA shelf is a price area where volume expands and stabilizes, indicating increased acceptance and trade facilitation. These areas often represent established value and can act as zones where price slows or rotates when revisited.\n\nThe ledges are simply the outer edges of shelves, where volume drops off quickly. There is no functional difference between shelves and ledges; ledges are the boundaries of the shelf where acceptance transitions into rejection.\n\n<span id=\"volume-profile-placement-methods\"></span>\n## Volume Profile Placement Methods\n<span id=\"composite-profiles\"></span>\n### Composite Profiles\n90-Day Volume Profile • Source: orderflw.com\n\n7-Day Volume Profile • Source: orderflw.com\n\nA Composite Volume Profile aggregates volume data across multiple trading sessions into a single profile. Rather than focusing on one session or a fixed intraday range, composite profiles provide a broader structural view of where participation has developed over time. This makes them particularly useful for identifying longer-term areas of balance and imbalance.\n\nBy combining multiple days into one profile, composite profiles smooth out short-term noise and highlight price levels that have consistently attracted trading activity. These levels often serve as important references for market participants and can influence price behavior when revisited.\n\nCommonly used composite periods include 5-day, 7-day, 30-day, 90-day, 180-day, and 365-day profiles. Shorter composites tend to reflect recent market structure, while longer composites capture broader, more established value areas. The choice of composite length depends on the timeframe and context being analyzed.\n\n<span id=\"session-profiles\"></span>\n### Session Profiles\nOvernight Volume Profile • Source: orderflw.com\n\nSession Volume Profiles organize traded volume within clearly defined trading sessions, allowing the auction to be analyzed in its natural temporal structure. By separating volume by session, these profiles highlight how participation and value develop across different phases of the trading day.\n\nCommonly used sessions include the Overnight (ON) session and the Regular Trading Hours (RTH) session. Each session reflects distinct participant behavior. Overnight profiles represent price action from 18:00 to 09:30. RTH profiles represent price action from 09:30 to 16:00.\n\nIn addition to current sessions, prior session profiles are frequently referenced, including the previous day, week, and month. These historical session profiles provide important structural context by identifying where value was previously established and where participation was accepted or rejected.\n\nSession Volume Profiles are particularly effective for tracking day-to-day changes in market structure, comparing developing value across sessions, and identifying key reference levels such as prior session POCs, value areas, and extremes. When price revisits these levels, the market is often responding to previously established agreement.\n\n<span id=\"volume-footprint\"></span>\n### Volume Footprint\nVolume Footprint • Source: jumpstarttrading.com\n\nThe Volume Footprint, also referred to as Candlestick Volume Profile, visualizes traded volume directly within each individual candle. Instead of viewing a candlestick as a blank representation of price movement, footprint charts reveal how volume was distributed at each price level as the auction unfolded.\n\nEach footprint candle shows where transactions occurred as price traded higher and lower during that interval. This provides direct insight into what actually happened inside the candle, including areas of concentrated participation, aggressive buying or selling, and price levels that attracted or rejected volume.\n\nVolume Footprint charts are commonly used across multiple timeframes. On higher timeframes, they help identify opportunity zones and structural acceptance. On lower timeframes, they are frequently used for execution and short-term decision-making, as they expose shifts in orderflow with greater precision.\n\n<span id=\"youtube-videos\"></span>\n## YouTube Videos\nVolume Profile Trading Strategy\n\nThe Secret to Trading Volume Profiles\n\nTrack Smart Money with Volume Profile\n\n Interactive: Volume Profile Anatomy \n\nClick the buttons below the chart to learn what each component represents.\n\n VAH HVN POC LVN VAL \n\nClick a button below the chart to see its description.\n\n Test Your Knowledge 1 / 5 \n\nWhat does Volume Profile organize?\n\n A Price movement over time B Traded volume across price levels C The number of market participants D Candlestick patterns Discussion [Curriculum Index](/education)",
+    "quizQuestions": [
+      {
+        "question": "What does Volume Profile organize?",
+        "options": [
+          "Price movement over time",
+          "Traded volume across price levels",
+          "The number of market participants",
+          "Candlestick patterns"
+        ],
+        "correct": 1,
+        "explanation": "Volume Profile organizes traded volume horizontally by price level, revealing where the market facilitated the most and least trade."
+      },
+      {
+        "question": "What does a High Volume Node (HVN) represent?",
+        "options": [
+          "A price level with minimal trading activity",
+          "The highest price of the session",
+          "A price area of strong agreement and prior fair value",
+          "A breakout level"
+        ],
+        "correct": 2,
+        "explanation": "HVNs are price areas where significant volume was traded, reflecting strong agreement between buyers and sellers. They represent prior areas of fair value."
+      },
+      {
+        "question": "How is the Value Area typically defined in Volume Profile?",
+        "options": [
+          "The range containing 50% of the session's volume",
+          "The range containing approximately 70% of the session's volume",
+          "The range between the day's high and low",
+          "The range containing 90% of the session's volume"
+        ],
+        "correct": 1,
+        "explanation": "The Value Area contains approximately 70% of the session's total traded volume, representing where the majority of business was conducted."
+      },
+      {
+        "question": "What typically happens when price enters a Low Volume Node (LVN)?",
+        "options": [
+          "Price slows down and consolidates",
+          "Volume increases significantly",
+          "Price tends to move through quickly or reject sharply",
+          "The market closes for the session"
+        ],
+        "correct": 2,
+        "explanation": "LVNs have limited prior acceptance, so price either passes through quickly (continuation) or rejects sharply, as there is little structural support at these levels."
+      },
+      {
+        "question": "What is the Point of Control (POC)?",
+        "options": [
+          "The opening price of the session",
+          "The price level with the highest volume concentration",
+          "The midpoint between the high and low",
+          "The closing price of the session"
+        ],
+        "correct": 1,
+        "explanation": "The POC marks the price level where the highest amount of volume was traded. It serves as the market's primary reference for fair value during that period."
+      }
+    ]
+  },
+  {
+    "slug": "tpo",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Time Price Opportunity (TPO)",
+    "subtitle": "Market Profile analysis: 30-minute brackets, Initial Balance, single prints, and structural draws.",
+    "readTime": "12 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-what-is-time-price-oppurtunity",
+        "title": "01 What is Time Price Oppurtunity?",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "historical-context",
+        "title": "Historical Context",
+        "level": 3
+      },
+      {
+        "id": "how-tpo-is-constructed",
+        "title": "How TPO is Constructed",
+        "level": 3
+      },
+      {
+        "id": "02-market-profile-components",
+        "title": "02 Market Profile Components",
+        "level": 2
+      },
+      {
+        "id": "overview",
+        "title": "Overview",
+        "level": 3
+      },
+      {
+        "id": "value-area",
+        "title": "Value Area",
+        "level": 3
+      },
+      {
+        "id": "initial-balance",
+        "title": "Initial Balance",
+        "level": 3
+      },
+      {
+        "id": "single-prints",
+        "title": "Single Prints",
+        "level": 3
+      },
+      {
+        "id": "excess",
+        "title": "Excess",
+        "level": 3
+      },
+      {
+        "id": "poor-highs-poor-lows",
+        "title": "Poor Highs &amp; Poor Lows",
+        "level": 3
+      },
+      {
+        "id": "unfinished-auction",
+        "title": "Unfinished Auction",
+        "level": 3
+      },
+      {
+        "id": "03-market-profile-configurations",
+        "title": "03 Market Profile Configurations",
+        "level": 2
+      },
+      {
+        "id": "session-tpos",
+        "title": "Session TPO&#x27;s",
+        "level": 3
+      },
+      {
+        "id": "merging-tpos",
+        "title": "Merging TPO&#x27;s",
+        "level": 3
+      },
+      {
+        "id": "04-overnight-inventory",
+        "title": "04 Overnight Inventory",
+        "level": 2
+      },
+      {
+        "id": "05-youtube-videos",
+        "title": "05 Youtube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"01-what-is-time-price-oppurtunity\"></span>\n## 01 What is Time Price Oppurtunity?\n<span id=\"definition\"></span>\n### Definition\nTime Price Opportunity (TPO), also referred to as Market Profile, is a market analysis tool used to visualize how long price is accepted at different levels throughout a trading session. It organizes price activity horizontally by time spent at each price, rather than by traded volume, revealing where the market has spent the most and least time facilitating trade. TPO is not a trading strategy, but a structural framework for identifying value, balance, and participation within the auction.\n\nTPO represents the number of time periods (typically letters or blocks) that price trades at a given level during a session. These time periods are most commonly based on 30 minute intervals, with each bracket representing one segment of the session. Each occurrence reflects that the market revisited and accepted that price for a period of time. By aggregating these time-based observations, TPO highlights areas where the market found sustained agreement, as well as prices that were quickly rejected.\n\nFrom this perspective, price levels with a high concentration of TPO brackets indicate areas of acceptance and fair value (balance), whereas low TPO areas reflect rejection and directional movement (imbalance). TPO therefore provides objective insight into how the auction has developed over time and how price is likely to behave when revisiting these levels.\n\nMarket Profile Definition • Source: prorealtime.com\n\n<span id=\"historical-context\"></span>\n### Historical Context\nTPO was originally developed by J. Peter Steidlmayer in collaboration with the Chicago Board of Trade (CBOT) in the 1980s. It was designed to provide a structural view of the market that goes beyond simple price charts by showing how value develops throughout a session. The resulting profile organizes price activity into time based increments, creating a visual distribution.\n\n<span id=\"how-tpo-is-constructed\"></span>\n### How TPO is Constructed\nA TPO chart divides the trading session into equal time intervals, typically 30 minutes each. Each interval is assigned a letter (A, B, C, etc.), and every price traded during that period is marked with that letter.\n\nAs the session develops, these letters stack horizontally at each price level, forming a profile that shows how often price was visited. Levels with many letters indicate sustained acceptance, while those with few letters reflect brief rejection.\n\nBecause TPO is time based, the number of prints directly reflects how long the market accepted a price. This distinction between extended acceptance and quick rejection forms the foundation of TPO analysis.\n\nMarket Profile Construction • Source: prorealtime.com\n\n<span id=\"02-market-profile-components\"></span>\n## 02 Market Profile Components\n<span id=\"overview\"></span>\n### Overview\nMarket Profile Overview • Source: prorealtime.com\n\nThe illustration above shows an example of a Market Profile (TPO). It's important to note that not all Market Profiles will look the same, as their structure changes depending on market conditions. This example is for illustrative purposes and reflects a classic TPO distribution. In the following sections, we will break down each of its components in detail.\n\n<span id=\"value-area\"></span>\n### Value Area\nTPO Value Area • Source: orderflw.com\n\nThe Value Area represents the range of prices where the majority of trading activity has occurred during a given session. It reflects the zone in which buyers and sellers were most willing to transact, indicating broad agreement on price and efficient trade facilitation. When price remains within this area, market activity is typically rotational rather than directional.\n\nWithin the Market Profile and Volume Profile framework, the value area is commonly defined as the range that contains approximately 70% of the session's total traded volume. At the center of this range is the Point of Control (POC), which marks the price level with the highest concentration of volume and serves as the market's primary reference for value during that period.\n\nThe upper boundary of the value area is known as the Value Area High (VAH), while the lower boundary is the Value Area Low (VAL). These levels define the extremes of accepted price for the session and often act as important reference points. When price approaches VAH or VAL, the market is testing the limits of acceptance and may either rotate back toward the POC or transition into imbalance.\n\nPrices that trade outside the value area reflect levels of reduced participation, where the market has not spent sufficient time facilitating trade.\n\n<span id=\"initial-balance\"></span>\n### Initial Balance\nTPO Initial Balance • Source: orderflw.com\n\nThe Initial Balance (IB) corresponds to the first two periods of the profile (letters A and B), generally representing the first trading hour of the session. It identifies the price range established immediately after the market opens and reflects the earliest negotiation between buyers and sellers.\n\n<span id=\"single-prints\"></span>\n### Single Prints\nTPO Single Prints & Excess • Source: orderflw.com\n\nSingle prints are price levels where only one TPO letter appears in the profile. They represent areas where the market moved through price quickly without returning, indicating a lack of acceptance and rapid directional movement. Single prints are the TPO equivalent of Low Volume Nodes in Volume Profile.\n\n [Explore Volume Profile→](/education/volume-profile) \n\nSingle prints often form during initiative activity, where aggressive buying or selling drives price through levels without allowing the market to build time. Because these levels were not accepted, single prints frequently act as areas of fast price movement when revisited. The market tends to either reject the area quickly or pass through it again with similar speed.\n\nFrom an Auction Market Theory perspective, single prints represent inefficient auctions where the market moved through price without facilitating meaningful two-sided trade. When the auction later revisits these levels, the response provides valuable information about whether the market now accepts or continues to reject these prices.\n\n [Explore Auction Market Theory→](/education/amt) \n\nIn the illustration, the two distributions represent distinct zones of agreement where the market spent considerable time and facilitated trade across multiple periods. The single prints connecting them represent the initiative move that bridged one area of acceptance to another. This structure is characteristic of a Double Distribution Day, where balance is disrupted, price moves rapidly through a series of levels, and balance is re-established at a new price area.\n\nBecause single prints mark areas of minimal participation, they serve as important reference levels. When the market revisits a zone of single prints, the speed and character of the response reveal whether acceptance is developing or whether the market continues to treat those prices as areas of rejection.\n\n<span id=\"excess\"></span>\n### Excess\nTPO Single Prints & Excess • Source: orderflw.com\n\nThe extremes of a TPO profile provide important information about how the auction concluded at its boundaries.\n\nExcess occurs when the market reaches an extreme and is met with strong opposing participation, creating a sharp rejection. On a TPO profile, excess appears as a tail of two or more consecutive levels where only one period traded before the market reversed at the very top or bottom of the profile . Excess signals a clean completion of the auction in that direction and suggests that the market found a definitive boundary.\n\nFrom an Auction Market Theory perspective, these levels often mark areas where mean reversion becomes likely, particularly when the prior session's profile was balanced and the market is expected to remain within or return to value.\n\n [Explore Auction Market Theory→](/education/amt) \n\n### Poor Highs & Poor Lows\n\nTPO Poor Highs & Poor Lows • Source: orderflw.com\n\nA poor high or poor low occurs when only a single TPO period appears at the extreme of the profile. This means the market briefly touched that price level once and moved away without generating a meaningful rejection. Unlike excess, where two or more single prints form a clear tail indicating strong opposing activity, a poor extreme reflects a weak or absent response.\n\nBecause the auction was not firmly rejected at that level, the market is likely to return and retest it. Poor highs and lows represent unfinished business and can be used as directional context or as draw on liquidity levels. On a candlestick chart, they often correspond to relative equal highs or relative equal lows.\n\nThe distinction matters for anticipating future behavior. Excess at an extreme signals a completed auction where a revisit is less probable. A poor high or poor low signals that the auction stopped without conviction, increasing the probability that price will return to that level in a future session.\n\n<span id=\"unfinished-auction\"></span>\n### Unfinished Auction\nTPO Unfinished Auction • Source: orderflw.com\n\nAn unfinished auction (UFA) occurs when two or more TPO periods reach the exact same price at the extreme of the profile, creating a flat, aligned edge. This structure indicates that the market tested a level multiple times across different periods but failed to break through, and no clean rejection occurred to complete the auction.\n\nBecause the auction was left incomplete, price has a tendency to return to these levels. The market left unresolved business at that price, and when conditions allow, it will often retrace to sweep through the level and finish what it started. On a candlestick chart, unfinished auctions appear as equal highs or equal lows.\n\n<span id=\"03-market-profile-configurations\"></span>\n## 03 Market Profile Configurations\n### Session TPO's\n\nSession TPO's • Source: orderflw.com\n\nTPO profiles can be configured to display different session scopes depending on what part of the trading day is being analyzed. The most common configurations are Overnight (OVN), Regular Trading Hours (RTH), and Daily.\n\nAn Overnight profile captures activity that occurs outside of regular trading hours, typically during the electronic session between the prior close and the next day's open. OVN profiles provide context for how price has been positioned before the regular session begins and often establish early reference levels.\n\nA Regular Trading Hours profile captures activity during the main session, where participation and volume are typically highest. RTH profiles are the most widely used for intraday analysis because they reflect the period of greatest market engagement.\n\nA Daily profile merges the overnight and regular sessions into a single composite, providing a complete view of all activity within a 24-hour period. This broader scope is useful for understanding overall market structure without separating sessions.\n\nBeyond these, profiles can also be configured on weekly, monthly, or yearly timeframes. Longer timeframes aggregate more data and reveal higher-level areas of acceptance and rejection that may not be visible on a single session.\n\n### Merging TPO's\n\nMerging TPO's • Source: orderflw.com\n\nMerging TPO profiles combines multiple sessions into a single composite, creating a broader view of how the market has developed over time. Rather than analyzing each session in isolation, a merged profile aggregates all activity across the selected range and reveals the combined structure of acceptance and rejection.\n\nThe most common use of merging is combining consecutive sessions to identify multi-day balance areas. When several sessions trade within overlapping price ranges, merging them produces a wider, more defined profile that highlights where the market has spent the most time and where value has formed across multiple days. The resulting value area and point of control represent a higher-timeframe consensus of fair value.\n\nMerging is also useful for identifying structural features that are not visible on individual profiles. A single session may appear directional, but when merged with adjacent sessions, it may reveal that the market is rotating within a larger balance area. Conversely, merging can confirm that separate sessions are building distinct, non-overlapping value areas, indicating a sustained directional move.\n\n<span id=\"04-overnight-inventory\"></span>\n## 04 Overnight Inventory\nOvernight inventory refers to the positioning of the overnight session relative to the prior day's settlement. The settle price is established at 16:15, 45 minutes before the regular session close, and serves as the reference point for measuring overnight positioning. If the overnight session traded above the settle, the inventory is long. If it traded below the settle, the inventory is short. If it traded around the settle or corrected itself within the session, the inventory is considered neutral.\n\nThe degree of overnight inventory matters. A session that traded entirely on one side of the settle is classified as 100% long or 100% short, while a session where only the majority traded on one side is considered slightly long or slightly short. A 100% long or short inventory carries a stronger signal and is more likely to be corrected than a slight imbalance.\n\nApproximately 70% of the time, the RTH open produces a counter-auction relative to overnight inventory. If overnight inventory is long, the market tends to trade lower after the open. If overnight inventory is short, the market tends to trade higher.\n\nThis happens because overnight participants are generally weaker hands. Liquidity during the electronic session is lower, and the traders active during these hours are typically not institutional participants with large, committed positions. When the regular session opens and liquidity increases, these overnight positions are often liquidated quickly. The aggressive activity at the open is not new money entering the market but rather old overnight business being unwound.\n\nIf overnight inventory is long and the market does not correct lower after the open but instead continues higher, this is a sign of genuine strength. The overnight positioning was validated by new participation rather than being unwound. The same applies in reverse: if overnight inventory is short and the market continues lower without correcting, it signals genuine weakness.\n\nScenarios where overnight inventory tends to follow through rather than correct include directionally strong overnight sessions with clear conviction, gaps that hold, and high confidence from the open in the same direction as the overnight inventory. When value is directionally clear and the prior session closed strong in one direction, overnight follow-through becomes more likely.\n\nFor more examples, check discord.gg/dataprocess\n\n<span id=\"05-youtube-videos\"></span>\n## 05 Youtube Videos\n Interactive: Market Profile (TPO) Anatomy \n\nClick the buttons below the chart to explore each component of the TPO profile.\n\n VAH VAL Initial Balance POC Single Prints Excess UFA \n\nClick a button below the chart to see its description.\n\n Test Your Knowledge 1 / 5 \n\nWhat does TPO measure that Volume Profile does not?\n\n A The number of trades at each price B The time spent at each price level C The direction of trades D The spread between bid and ask Discussion [Curriculum Index](/education)",
+    "quizQuestions": [
+      {
+        "question": "What does TPO measure that Volume Profile does not?",
+        "options": [
+          "The number of trades at each price",
+          "The time spent at each price level",
+          "The direction of trades",
+          "The spread between bid and ask"
+        ],
+        "correct": 1,
+        "explanation": "TPO organizes market activity based on time spent at price rather than traded volume, showing how long the market accepted each price level."
+      },
+      {
+        "question": "What is the Initial Balance (IB)?",
+        "options": [
+          "The first trade of the session",
+          "The price range of the first hour of the session",
+          "The overnight session range",
+          "The previous day's value area"
+        ],
+        "correct": 1,
+        "explanation": "The Initial Balance is the price range established during the first hour of trading (the A and B periods), setting the session's reference range."
+      },
+      {
+        "question": "What are single prints in a TPO profile?",
+        "options": [
+          "The widest part of the profile where most time was spent",
+          "Rows with only one letter in the middle of wider rows, where price moved through quickly",
+          "The POC level",
+          "Letters at the extremes of the profile"
+        ],
+        "correct": 1,
+        "explanation": "Single prints are thin sections in the middle of the profile where only one period printed. Price moved through quickly without rotating back. They indicate strong initiative activity and often act as future support or resistance."
+      },
+      {
+        "question": "What is the difference between excess and an unfinished auction at a profile extreme?",
+        "options": [
+          "They are the same thing",
+          "Excess shows rejection with consecutive single-period prints, an unfinished auction has no rejection and price may return",
+          "Excess only happens at the bottom, unfinished auctions only at the top",
+          "Excess means high volume, unfinished auction means low volume"
+        ],
+        "correct": 1,
+        "explanation": "Excess (tails) shows aggressive rejection at an extreme with two or more consecutive single-period rows. An unfinished auction has no excess, meaning price was not rejected and may return to that level to complete the auction."
+      },
+      {
+        "question": "What is the TPO Point of Control?",
+        "options": [
+          "The first price traded in the session",
+          "The price level with the most TPO prints, where the market spent the most time",
+          "The midpoint between the session high and low",
+          "The price where the most volume was traded"
+        ],
+        "correct": 1,
+        "explanation": "The TPO Point of Control is the price level with the most TPO prints, representing where the market spent the most time. Unlike Volume Profile POC which measures volume, TPO POC measures acceptance through duration."
+      }
+    ]
+  },
+  {
+    "slug": "footprint",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Footprint Charts",
+    "subtitle": "Inside the candle: Bid x Ask volume, diagonal imbalances, absorption, and execution context.",
+    "readTime": "1 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "footprint",
+        "title": "Footprint",
+        "level": 2
+      },
+      {
+        "id": "youtube-videos",
+        "title": "YouTube Videos",
+        "level": 2
+      },
+      {
+        "id": "more-footprint-examples",
+        "title": "More Footprint Examples",
+        "level": 3
+      }
+    ],
+    "contentMarkdown": "<span id=\"footprint\"></span>\n## Footprint\nWe do not offer footprint content on this website. We personally do not use the footprint and would not be able to provide trustworthy educational content on it. Teaching a tool we do not actively use ourselves would go against the standard we hold for every other section on this platform.\n\nThat said, we have some footprint content in our Notion pages inside the FLW Discord. For a more in depth look, the Data Discord server covers footprint extensively.\n\n [Join the FLW Discord](https://discord.gg/bsuM3urQCX)[Join the Data Discord](https://discord.gg/jRxK7tgM) \n\n<span id=\"youtube-videos\"></span>\n## YouTube Videos\nFootprint Charts\n\nFootprint Analysis\n\nFootprint Trading\n\n<span id=\"more-footprint-examples\"></span>\n### More Footprint Examples\nReading Footprint\n\nFootprint Execution\n\nFootprint Orderflow\n\n Discussion [Curriculum Index](/education)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "dom",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Depth of Market (DOM)",
+    "subtitle": "Direct market access to the limit order book: resting liquidity, absorption, pulling, and stacking.",
+    "readTime": "9 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-what-is-the-depth-of-market",
+        "title": "01 What is the Depth of Market?",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "how-the-dom-is-structured",
+        "title": "How the DOM is Structured",
+        "level": 3
+      },
+      {
+        "id": "order-types",
+        "title": "Order Types",
+        "level": 3
+      },
+      {
+        "id": "the-spread",
+        "title": "The Spread",
+        "level": 3
+      },
+      {
+        "id": "02-learning-the-dom",
+        "title": "02 Learning the DOM",
+        "level": 2
+      },
+      {
+        "id": "03-reading-the-dom",
+        "title": "03 Reading the DOM",
+        "level": 2
+      },
+      {
+        "id": "liquidity-distribution",
+        "title": "Liquidity Distribution",
+        "level": 3
+      },
+      {
+        "id": "04-key-concepts",
+        "title": "04 Key Concepts",
+        "level": 2
+      },
+      {
+        "id": "absorption",
+        "title": "Absorption",
+        "level": 3
+      },
+      {
+        "id": "exhaustion",
+        "title": "Exhaustion",
+        "level": 3
+      },
+      {
+        "id": "pulling-and-stacking",
+        "title": "Pulling and Stacking",
+        "level": 3
+      },
+      {
+        "id": "spoofing",
+        "title": "Spoofing",
+        "level": 3
+      },
+      {
+        "id": "iceberg-orders",
+        "title": "Iceberg Orders",
+        "level": 3
+      },
+      {
+        "id": "finished-auctions",
+        "title": "Finished Auctions",
+        "level": 3
+      },
+      {
+        "id": "05-combining-context-with-execution",
+        "title": "05 Combining Context with Execution",
+        "level": 2
+      },
+      {
+        "id": "06-youtube-channels",
+        "title": "06 YouTube Channels",
+        "level": 2
+      },
+      {
+        "id": "07-youtube-videos",
+        "title": "07 YouTube Videos",
+        "level": 2
+      },
+      {
+        "id": "more-dom-examples",
+        "title": "More DOM Examples",
+        "level": 3
+      }
+    ],
+    "contentMarkdown": "<span id=\"01-what-is-the-depth-of-market\"></span>\n## 01 What is the Depth of Market?\nThe DOM is a highly personalized and experience based tool. Reading the DOM cannot be learned solely through written content. This section covers the fundamental concepts and mechanics, but developing real skill requires extensive screen time, repetition, and live market observation. The DOM is not a pattern based tool. Your job is to read the auction with the DOM like a book. Treat this as a starting point, not a complete guide.\n\n<span id=\"definition\"></span>\n### Definition\nThe Depth of Market (DOM), also called Price Ladder, is a real time display of all resting limit orders at each price level for a given instrument. Unlike Volume Profile or TPO which analyze historical data, the DOM operates entirely in real time. It shows you where liquidity is sitting right now, how fast it is being consumed, and where aggressive participants are willing to transact. From an Auction Market Theory perspective, the DOM visualizes the live negotiation between buyers and sellers, showing where the market is willing to facilitate trade and where participation is absent.\n\nDOM Structure • Source: orderflw.com\n\n<span id=\"how-the-dom-is-structured\"></span>\n### How the DOM is Structured\nThe DOM is organized as a vertical price ladder with the current market price at the center. Each row represents one tick increment. The core columns are: Volume (total contracts traded at each price during the session), Price (the tick ladder), Bid (resting buy limit orders, passive), @Bid (market sell orders hitting bids, aggressive selling), @Ask (market buy orders lifting asks, aggressive buying), Ask (resting sell limit orders, passive), and Bid/Ask Delta (shows how passive participants are repositioning their orders, whether they are pulling or stacking liquidity at each level). The best bid and best ask sit at the center of the ladder, separated by the spread. Everything above the spread shows resting sell orders, everything below shows resting buy orders. These quantities update in real time as orders are filled, cancelled, or added.\n\n<span id=\"order-types\"></span>\n### Order Types\nThe DOM displays both passive and aggressive orders. Limit orders (Bid and Ask columns) are passive, they sit at a specific price and wait to be filled, providing liquidity. Market orders (@Bid and @Ask columns) are aggressive, they execute immediately at the best available price and consume that liquidity. A market buy lifts the best ask, a market sell hits the best bid. Price moves when aggressive orders consume all resting liquidity at a price level. If all ask contracts at 5868.00 are consumed by market buys, price moves to 5868.25 where the next resting orders exist. This relationship between aggressive and passive orders is the fundamental engine of price movement.\n\n<span id=\"the-spread\"></span>\n### The Spread\nThe spread is the difference between the best bid and best ask. In liquid futures markets like ES, it is typically one tick. A stable tight spread indicates healthy balanced participation. A widening spread signals reduced participation or increased uncertainty, often preceding a fast move as market makers withdraw their resting orders.\n\n<span id=\"02-learning-the-dom\"></span>\n## 02 Learning the DOM\nThere is no shortcut. You learn reading the DOM by watching it live, every single day, for months. Record your screen, replay sessions, and study what happened at key levels. Focus on one instrument and one session. Do not jump between markets. You need to build pattern recognition through repetition, not through theory. The concepts in this section give you a framework, but the skill comes from screen time. Start by just watching without trading. Pay attention to how the numbers behave at levels you identified beforehand. Over time you will start seeing the same sequences repeat. That is when reading the DOM becomes intuitive.\n\n<span id=\"03-reading-the-dom\"></span>\n## 03 Reading the DOM\n<span id=\"liquidity-distribution\"></span>\n### Liquidity Distribution\nThe distribution of resting orders in the Bid and Ask columns provides immediate context about market structure. Even distribution on both sides suggests balance. Heavy resting offers stacked above price may indicate resistance. Thin liquidity on one side suggests price can move through quickly. However, visible liquidity must be interpreted with caution. The DOM shows only the current state and this can change in milliseconds. The key question is not \"where is the liquidity?\" but \"how is the liquidity behaving?\" Watch the Bid/Ask Delta column to see whether passive participants are adding or removing orders as price approaches a level. Static liquidity that holds firm is more meaningful than liquidity that disappears before being tested.\n\nThe concepts explained below will make more sense once you start observing the DOM in real time. Do not worry if the terminology feels overwhelming at first.\n\n<span id=\"04-key-concepts\"></span>\n## 04 Key Concepts\n<span id=\"absorption\"></span>\n### Absorption\nDOM Absorption • Source: orderflw.com\n\nAbsorption occurs when a large resting order in the Bid or Ask column defends a price level by absorbing incoming aggressive flow without giving way. You can see it when the @Bid column shows heavy market selling at a level, but the Bid number stays firm or replenishes. The screenshot above shows trapped sellers at the low, heavy @Bid volume clustered into firm bids. However, trapped sellers alone are not absorption. You want to see a response from the buying side: initiation activity, size stepping in, pulling and stacking. Without that buyer response, the sellers may simply reload and push through. Institutions often defend a zone rather than a single price, spreading limit orders across 2 to 4 ticks. When you see consistent absorption across a cluster of ticks at a structural level like a value area boundary, prior POC, or VWAP, it combines real time orderflow confirmation with established auction context. Video examples of absorption in practice are found below in the YouTube section.\n\n<span id=\"exhaustion\"></span>\n### Exhaustion\nDOM Exhaustion • Source: orderflw.com\n\nExhaustion shows that the aggressive side has run out of participants. The screenshot above shows @Bid (aggressive selling) collapsing to single digits and zeros at the low while @Ask (aggressive buying) maintains healthy levels throughout. However, thin aggressive flow alone is not exhaustion. You want to see it after a sustained directional move, and you want confirmation from the other side in the form of initiation, size, pulling and stacking. During choppy rotational conditions thin flow is noise, not a signal. The pattern should persist for more than a few seconds, otherwise it is likely just a brief liquidity gap. Exhaustion is the complement of absorption: absorption shows a passive participant defending, exhaustion shows the aggressive side losing momentum. Both together provide strong evidence that the current directional auction is concluding. Video examples of exhaustion in practice are found below in the YouTube section.\n\n<span id=\"pulling-and-stacking\"></span>\n### Pulling and Stacking\nDOM Pulling and Stacking • Source: orderflw.com\n\nPulling and stacking is visible through the Bid/Ask Delta column. Pulling occurs when resting orders are removed (delta goes negative on the bid side or positive on the ask side), signaling reduced confidence. Stacking occurs when orders are added, building genuine support or resistance. When asks are pulling ahead of price while bids are stacking behind, the market is clearing a path for price to move higher. A pull/stack flip is when this dynamic suddenly switches sides at a key level, for example buyers dominating then flipping to sellers stacking as price reaches resistance. Do not use pulling and stacking alone. It is most significant when combined with other confluences like absorption or exhaustion.\n\n<span id=\"spoofing\"></span>\n### Spoofing\nNot all order placement represents genuine intent. Spoofing involves placing large fake orders in the Bid or Ask column with the intention of cancelling them before execution. The tell is that large orders appear suddenly and disappear when price approaches without ever getting partially filled. Genuine large orders almost always show partial fills in the @Bid or @Ask columns. Developing the screen time to distinguish routine algorithmic behavior from meaningful orderflow is essential.\n\n<span id=\"iceberg-orders\"></span>\n### Iceberg Orders\nIceberg orders are large institutional orders broken into smaller visible portions. Only a small tip is displayed in the Bid or Ask column while the full order is much larger and automatically replenishes. The tell: the Volume column shows heavy trading at a level, the @Bid or @Ask column shows significant aggressive flow, but the resting Bid or Ask number keeps refreshing to a similar size after each fill.\n\n<span id=\"finished-auctions\"></span>\n### Finished Auctions\nDOM Finished Auctions • Source: orderflw.com\n\nFinished auctions mean the current move is completed, possibly confirming a mean reversion. The screenshot above shows @Bid 18 at 861.25 with no @Ask opposite. No aggressive buying at the extreme low means no one is willing to buy there anymore, the downside auction is finished. In bearish scenarios you look for the same in reverse: @Ask alone at the high with no @Bid opposite. Finished auctions appear quite often and then fail again, so never use them alone. On their own they do not tell you anything. They are just a nice additional confluence when combined with some kind of auction story.\n\n<span id=\"05-combining-context-with-execution\"></span>\n## 05 Combining Context with Execution\nThe DOM provides real time confirmation of the market state identified through structural tools. When Volume Profile or TPO suggests price is approaching a key level, the DOM reveals how participants are actually interacting with it. If the DOM shows absorption at a support level with aggressive selling diminishing, you have convergent evidence that the level will hold. If resting bids are being pulled and aggressive selling is accelerating, the structural level may fail. Context tells you where to look. The DOM tells you what is actually happening there. This is one of the most powerful analytical frameworks available: use Volume Profile and TPO to identify levels, then use the DOM for real time confirmation and precise execution timing. The DOM is a skill that requires extensive screen time to develop. Record your sessions and review them to build pattern recognition. Specialize in one market, as each instrument has distinct microstructure characteristics.\n\n<span id=\"06-youtube-channels\"></span>\n## 06 YouTube Channels\nThese channels regularly post DOM replays and in depth orderflow education. More DOM replay content can be found in the DOM replay channel in the FLW Discord.\n\n [The ATM Hour](https://www.youtube.com/@theatmhour)[Kole Futures Trading](https://www.youtube.com/@KoleFuturesTrading)[Xyzeee Trades](https://www.youtube.com/@XyzeeeTrades) \n\n<span id=\"07-youtube-videos\"></span>\n## 07 YouTube Videos\nDOM Absorption\n\nDOM Exhaustion\n\nPulling and Stacking\n\n<span id=\"more-dom-examples\"></span>\n### More DOM Examples\nPull/Stack Flips\n\nFinished Auctions\n\nDOM Execution\n\n Interactive: DOM Anatomy \n\nClick a button below the chart to explore each column.\n\n Volume Price Bid @Bid @Ask Ask Bid/Ask D \n\nClick a button below the chart to see its description.\n\n Test Your Knowledge 1 / 5 \n\nWhat is the difference between the Bid/Ask columns and the @Bid/@Ask columns?\n\n A They show the same data on different timeframes B Bid/Ask is passive, @Bid/@Ask is aggressive C Bid/Ask shows market orders, @Bid/@Ask shows limit orders D @Bid/@Ask is a filtered version of Bid/Ask Discussion [Curriculum Index](/education)",
+    "quizQuestions": [
+      {
+        "question": "What is the difference between the Bid/Ask columns and the @Bid/@Ask columns?",
+        "options": [
+          "They show the same data on different timeframes",
+          "Bid/Ask is passive, @Bid/@Ask is aggressive",
+          "Bid/Ask shows market orders, @Bid/@Ask shows limit orders",
+          "@Bid/@Ask is a filtered version of Bid/Ask"
+        ],
+        "correct": 1,
+        "explanation": "Bid and Ask columns show passive resting limit orders providing liquidity. @Bid and @Ask show aggressive market orders that consumed that liquidity. This distinction between passive and aggressive is at the core of DOM reading."
+      },
+      {
+        "question": "You see heavy @Bid volume clustered into firm bids at the low. Is this absorption?",
+        "options": [
+          "Yes, that is the definition of absorption",
+          "Not yet, you need a buyer response too",
+          "Only if the spread widens at the same time",
+          "Only if the volume column shows a new high"
+        ],
+        "correct": 1,
+        "explanation": "Trapped sellers alone are not absorption. You want to see a response from the buying side: initiation activity, size stepping in, pulling and stacking. Without that buyer response, the sellers may simply reload and push through."
+      },
+      {
+        "question": "What distinguishes real exhaustion from a brief liquidity gap?",
+        "options": [
+          "Exhaustion only happens at round numbers",
+          "There is no way to tell them apart",
+          "It follows a sustained move and the other side confirms",
+          "Exhaustion always leads to a reversal"
+        ],
+        "correct": 2,
+        "explanation": "Thin aggressive flow alone is not exhaustion. You want to see it after a sustained directional move, and you want confirmation from the other side in the form of initiation, size, pulling and stacking. During choppy rotational conditions, thin flow is noise."
+      },
+      {
+        "question": "Should you use pulling and stacking as a standalone signal?",
+        "options": [
+          "Yes, it is reliable on its own",
+          "No, combine it with other confluences",
+          "Only on higher timeframes",
+          "Only during the initial balance period"
+        ],
+        "correct": 1,
+        "explanation": "Do not use pulling and stacking alone. It is most significant when combined with other confluences like absorption or exhaustion."
+      },
+      {
+        "question": "You see @Bid 18 at the low with no @Ask opposite. What does this tell you?",
+        "options": [
+          "A large buyer is about to enter",
+          "The downside auction is finished, but just a confluence",
+          "Price will definitely reverse from here",
+          "The market is about to close"
+        ],
+        "correct": 1,
+        "explanation": "Finished auctions appear quite often and then fail again, so never use them alone. On their own they do not tell you anything. They are just a nice additional confluence when combined with some kind of auction story."
+      }
+    ]
+  },
+  {
+    "slug": "vwap",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Volume Weighted Average Price",
+    "subtitle": "Institutional fair value benchmark, standard deviation bands, and anchor selection.",
+    "readTime": "6 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-what-is-vwap",
+        "title": "01 What is VWAP?",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "the-formula",
+        "title": "The Formula",
+        "level": 3
+      },
+      {
+        "id": "02-vwap-as-a-reference-level",
+        "title": "02 VWAP as a Reference Level",
+        "level": 2
+      },
+      {
+        "id": "above-and-below-vwap",
+        "title": "Above and Below VWAP",
+        "level": 3
+      },
+      {
+        "id": "vwap-and-auction-market-theory",
+        "title": "VWAP and Auction Market Theory",
+        "level": 3
+      },
+      {
+        "id": "03-standard-deviation-bands",
+        "title": "03 Standard Deviation Bands",
+        "level": 2
+      },
+      {
+        "id": "overview",
+        "title": "Overview",
+        "level": 3
+      },
+      {
+        "id": "the-bands",
+        "title": "The Bands",
+        "level": 3
+      },
+      {
+        "id": "04-vwap-in-different-market-conditions",
+        "title": "04 VWAP in Different Market Conditions",
+        "level": 2
+      },
+      {
+        "id": "balanced-markets",
+        "title": "Balanced Markets",
+        "level": 3
+      },
+      {
+        "id": "trending-markets",
+        "title": "Trending Markets",
+        "level": 3
+      },
+      {
+        "id": "05-anchored-vwap",
+        "title": "05 Anchored VWAP",
+        "level": 2
+      },
+      {
+        "id": "definition",
+        "title": "Definition",
+        "level": 3
+      },
+      {
+        "id": "common-anchor-points",
+        "title": "Common Anchor Points",
+        "level": 3
+      },
+      {
+        "id": "06-multiple-timeframe-vwap",
+        "title": "06 Multiple Timeframe VWAP",
+        "level": 2
+      },
+      {
+        "id": "overview",
+        "title": "Overview",
+        "level": 3
+      },
+      {
+        "id": "confluence",
+        "title": "Confluence",
+        "level": 3
+      },
+      {
+        "id": "07-youtube-videos",
+        "title": "07 YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"01-what-is-vwap\"></span>\n## 01 What is VWAP?\n<span id=\"definition\"></span>\n<span id=\"definition\"></span>\n### Definition\nVolume Weighted Average Price (VWAP) calculates the average price of an instrument throughout a session, weighted by the volume traded at each level. Unlike a simple moving average that treats every price equally, VWAP gives more weight to prices where more contracts changed hands. The result is a single line that represents where the market actually facilitated the most trade. It's a simple concept.\n\nVWAP Overview • Source: orderflw.com\n\n<span id=\"the-formula\"></span>\n### The Formula\nThe VWAP is calculated using the following formula: VWAP = Σ (Typical Price x Volume) / Σ Volume.\n\nThe calculation resets at the start of each session and accumulates from there. Early in the session, when cumulative volume is low, a single trade can move VWAP significantly. As the session matures, VWAP stabilizes and becomes harder to shift. This is why VWAP tends to flatten out toward the end of the day.\n\n<span id=\"02-vwap-as-a-reference-level\"></span>\n## 02 VWAP as a Reference Level\n<span id=\"above-and-below-vwap\"></span>\n### Above and Below VWAP\nThe position of price relative to VWAP provides immediate context about intraday sentiment. When price trades above VWAP, the average buyer for the session is in profit, buying interest has been dominant, and sustained trading above confirms bullish intraday bias. When price trades below VWAP, the average buyer is underwater, selling pressure has been more dominant, and sustained trading below confirms bearish bias. When price is at VWAP, neither side has an advantage and the market is in balance. These conditions shift throughout the day. A market trading above VWAP for hours may suddenly break below, signaling a change of control. How price interacts with VWAP, whether it accepts or rejects the level, reveals evolving market dynamics.\n\n<span id=\"vwap-and-auction-market-theory\"></span>\n### VWAP and Auction Market Theory\nFrom an AMT perspective, VWAP represents the session's developing fair value. Just as Volume Profile identifies fair value through volume concentration at price, VWAP identifies it through the cumulative volume weighted average. Both answer the same question: where is the market facilitating the most efficient trade?\n\nNear VWAP, the market is balanced. Away from VWAP, it is in imbalance. This makes VWAP a natural complement to Volume Profile and TPO. Volume Profile shows the structural distribution of value. VWAP provides a dynamic, real time reference that evolves with the session.\n\n [Explore Auction Market Theory→](/education/amt) \n\n<span id=\"03-standard-deviation-bands\"></span>\n## 03 Standard Deviation Bands\n<span id=\"overview\"></span>\n<span id=\"overview\"></span>\n### Overview\nVWAP with Standard Deviation Bands • Source: orderflw.com\n\nStandard deviation bands around VWAP measure how far price has deviated from the session's average. They are mathematically derived from the actual distribution of traded prices and expand during volatile conditions and contract during calm ones. Treat the bands as probability zones, not certainties.\n\n<span id=\"the-bands\"></span>\n### The Bands\nYou can configure as many deviation bands as you want, but the most commonly used are the first three. Approximately 68% of the session's price activity falls within the 1SD bands, meaning the market is operating within a normal range. In balanced sessions, 1SD levels often act as soft boundaries where mean reversion begins, while in trending sessions price can ride along 1SD for extended periods. The 2SD bands capture approximately 95% of price activity. Reaching 2SD represents a significant extension from fair value and the market is statistically stretched. In balanced sessions this often coincides with exhaustion, while in strong trends 2SD may be reached and sustained. The 3SD bands capture approximately 99.7% of all trading and are rarely reached. Price at 3SD typically only occurs during strong imbalances or discovery phases where one side has taken full control of the auction. These levels frequently mark turning points where exhaustion sets in and the statistical odds favor a rotation back toward VWAP.\n\n<span id=\"04-vwap-in-different-market-conditions\"></span>\n## 04 VWAP in Different Market Conditions\n<span id=\"balanced-markets\"></span>\n### Balanced Markets\nVWAP in Balanced Markets • Source: orderflw.com\n\nIn balanced or range bound sessions, VWAP acts as the equilibrium. Price repeatedly returns to VWAP after testing the extremes, creating a rotational pattern. The VWAP line itself stays relatively flat. The key principle: price trading far from VWAP in a balanced market is statistically likely to return to the average. The 1SD bands define where \"far\" is in objective terms.\n\n<span id=\"trending-markets\"></span>\n### Trending Markets\nVWAP in Trending Markets • Source: orderflw.com\n\nIn trending or discovery markets, VWAP acts as dynamic support or resistance rather than a mean reversion target. Price tends to grind along the 2nd or 3rd deviation bands as one side maintains full control of the auction. In these conditions, pullbacks to the 1st deviation band often provide high probability continuation entries in the direction of the trend. Do not fade a trend day just because price has reached the 2nd or 3rd deviation. The market can stay at extremes far longer than expected when initiative activity is driving the auction, and counter-trend entries on trend days are one of the fastest ways to take unnecessary losses. The slope of VWAP confirms the trend: a flat VWAP suggests balance, a clearly sloping VWAP confirms directional activity. Recognizing whether the market is balanced or trending is essential for applying VWAP correctly, because the same level can be a mean reversion opportunity in one context and a trend continuation level in another.\n\n<span id=\"05-anchored-vwap\"></span>\n## 05 Anchored VWAP\n### Definition\n\nAnchored VWAP • Source: orderflw.com\n\nAnchored VWAP (aVWAP) uses the same formula as standard VWAP but lets the trader choose the starting point instead of defaulting to the session open. This means it can span days, weeks, months, or even years, making it a powerful tool for understanding the average cost basis of participants who entered after a specific event or price level.\n\n<span id=\"common-anchor-points\"></span>\n### Common Anchor Points\nCommon anchor points include significant swing highs and lows, session opens, earnings or macro events, gap opens, breakouts from consolidation, and weekly, monthly, quarterly, or yearly opens. Anchoring to a swing low, for example, reveals where the average buyer accumulated during the rally that followed. If price pulls back to that level, the average buyer is approximately break even, which makes it a psychologically and structurally significant zone. When multiple anchored VWAPs converge at similar prices, the resulting confluence carries significantly more weight than any single level and often attracts meaningful orderflow when tested.\n\n<span id=\"06-multiple-timeframe-vwap\"></span>\n## 06 Multiple Timeframe VWAP\n### Overview\n\nMultiple Timeframe VWAP • Source: orderflw.com\n\nVWAP can be applied across multiple timeframes, each operating independently with its own cumulative data. Daily VWAP resets each session and is the primary intraday reference, though some traders also use an RTH-only VWAP that excludes overnight activity and resets at the regular trading hours open. Weekly VWAP accumulates from Monday's open and reflects the week's average, providing broader context for swing trading decisions. Monthly VWAP accumulates from the first trading day of the month and serves as a higher timeframe benchmark used by longer term participants.\n\n<span id=\"confluence\"></span>\n### Confluence\nWhen daily VWAP, weekly VWAP, and an anchored VWAP align at similar prices, the combined weight creates a high probability decision point. A breakout above both daily and weekly VWAP carries more significance than a daily VWAP breakout alone. Similarly, support where multiple VWAP references converge provides stronger evidence that the level will hold.\n\n<span id=\"07-youtube-videos\"></span>\n## 07 YouTube Videos\nVWAP Explained\n\nVWAP Trading\n\nAdvanced VWAP\n\n Test Your Knowledge 1 / 5 \n\nWhat makes VWAP different from a simple moving average?\n\n A VWAP uses closing prices only B VWAP gives more weight to prices where more volume was traded C VWAP changes depending on chart timeframe D VWAP only works on daily charts Discussion [Curriculum Index](/education)",
+    "quizQuestions": [
+      {
+        "question": "What makes VWAP different from a simple moving average?",
+        "options": [
+          "VWAP uses closing prices only",
+          "VWAP gives more weight to prices where more volume was traded",
+          "VWAP changes depending on chart timeframe",
+          "VWAP only works on daily charts"
+        ],
+        "correct": 1,
+        "explanation": "Unlike a simple moving average that treats every price equally, VWAP gives more weight to prices where more contracts changed hands. It also stays the same on every timeframe because it is cumulative."
+      },
+      {
+        "question": "What does it mean when price is trading below VWAP?",
+        "options": [
+          "The market is about to reverse",
+          "The average buyer for the session is underwater",
+          "Volume is decreasing",
+          "The session is about to end"
+        ],
+        "correct": 1,
+        "explanation": "When price is below VWAP, the average buyer for the session is at a loss. Selling pressure has been more dominant and sustained trading below VWAP confirms bearish intraday bias."
+      },
+      {
+        "question": "In a strong trend day, what should you avoid doing at the 2nd or 3rd deviation band?",
+        "options": [
+          "Adding to your position in the trend direction",
+          "Watching for continuation entries at the 1st deviation",
+          "Fading the move just because price is at an extreme",
+          "Observing the slope of VWAP"
+        ],
+        "correct": 2,
+        "explanation": "Do not fade a trend day just because price has reached the 2nd or 3rd deviation. The market can stay at extremes far longer than expected when initiative activity is driving the auction, and counter-trend entries on trend days lead to unnecessary losses."
+      },
+      {
+        "question": "What is Anchored VWAP used for?",
+        "options": [
+          "Calculating overnight volume",
+          "Understanding the average cost basis of participants from a specific point in time",
+          "Setting stop-loss levels automatically",
+          "Predicting earnings announcements"
+        ],
+        "correct": 1,
+        "explanation": "Anchored VWAP uses the same formula as standard VWAP but lets the trader choose the starting point. This reveals the average cost basis of participants who entered after a specific event or price level."
+      },
+      {
+        "question": "What happens when daily, weekly, and anchored VWAPs converge at the same price?",
+        "options": [
+          "The levels cancel each other out",
+          "It creates a high probability decision point with strong confluence",
+          "VWAP becomes invalid",
+          "The market always reverses at that level"
+        ],
+        "correct": 1,
+        "explanation": "When multiple VWAP references converge at similar prices, the combined weight creates a high probability decision point. These confluence zones often attract meaningful order flow when tested."
+      }
+    ]
+  },
+  {
+    "slug": "heatmap",
+    "phase": "Phase 02",
+    "phaseNum": "02",
+    "phaseTitle": "Core Knowledge",
+    "category": "Core Knowledge",
+    "title": "Heatmap Analysis",
+    "subtitle": "Visualizing resting historical liquidity across depth: liquidity pools, spoofs, and sweeps.",
+    "readTime": "1 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "heatmap",
+        "title": "Heatmap",
+        "level": 2
+      },
+      {
+        "id": "youtube-videos",
+        "title": "YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"heatmap\"></span>\n## Heatmap\nWe do not offer heatmap content on this website. We personally do not use the heatmap and would not be able to provide trustworthy educational content on it. Teaching a tool we do not actively use ourselves would go against the standard we hold for every other section on this platform.\n\n [Join the FLW Discord](https://discord.gg/bsuM3urQCX) \n\n<span id=\"youtube-videos\"></span>\n## YouTube Videos\nHeatmap Trading\n\nOrder Flow Heatmap Analysis\n\nLiquidity Heatmap\n\n Discussion [Curriculum Index](/education)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "psychology",
+    "phase": "Phase 03",
+    "phaseNum": "03",
+    "phaseTitle": "Psychology & Edge",
+    "category": "Psychology & Edge",
+    "title": "Trading Psychology",
+    "subtitle": "Mastering the inner game: emotional control, conquering FOMO, tilt prevention, and systematic discipline.",
+    "readTime": "9 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-two-minds-one-trader",
+        "title": "01 Two Minds, One Trader",
+        "level": 2
+      },
+      {
+        "id": "02-process-over-outcome",
+        "title": "02 Process Over Outcome",
+        "level": 2
+      },
+      {
+        "id": "03-revenge-trading",
+        "title": "03 Revenge Trading",
+        "level": 2
+      },
+      {
+        "id": "04-fear-of-missing-out",
+        "title": "04 Fear of Missing Out",
+        "level": 2
+      },
+      {
+        "id": "05-overtrading",
+        "title": "05 Overtrading",
+        "level": 2
+      },
+      {
+        "id": "06-tilt",
+        "title": "06 Tilt",
+        "level": 2
+      },
+      {
+        "id": "07-the-journaling-habit",
+        "title": "07 The Journaling Habit",
+        "level": 2
+      },
+      {
+        "id": "08-discipline-is-a-skill",
+        "title": "08 Discipline is a Skill",
+        "level": 2
+      },
+      {
+        "id": "09-expectations-and-patience",
+        "title": "09 Expectations and Patience",
+        "level": 2
+      },
+      {
+        "id": "10-youtube-videos",
+        "title": "10 YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"01-two-minds-one-trader\"></span>\n## 01 Two Minds, One Trader\nEvery trader operates with two systems. The conscious mind is the planner. It is slow, logical, and rational. It works when the market is closed, analyzing data, calculating risk, defining levels. The subconscious mind is the executor. It is fast, emotional, and protective. It operates when money is on the line. It does not care about your plan. It cares about avoiding pain.\n\nThe gap between knowing what to do and actually doing it is the central problem of trading psychology. You can have the best system in the world, but if your subconscious overrides your plan the moment you feel fear or greed, none of it matters. The goal is to train the subconscious to trust the conscious plan. This takes repetition, journaling, and discipline over months and years.\n\n<span id=\"02-process-over-outcome\"></span>\n## 02 Process Over Outcome\nA winning trade executed outside of your system is a bad trade. A losing trade executed perfectly within your system is a good trade. If you judge yourself by outcomes instead of process, you will never develop consistency. Outcomes are random in the short term. Process is what produces results over hundreds of trades.\n\nTrack your execution quality separately from your P&L. After each session, score yourself on whether you followed your rules. Did you enter at the right location? Did you wait for confirmation? Did you honor your stop? Did you manage your size? If the answer to all of these is yes, it was a good session regardless of what the P&L says. Over time, a high execution score will produce positive results. A low execution score will produce losses no matter how many lucky wins you get in between.\n\n<span id=\"03-revenge-trading\"></span>\n## 03 Revenge Trading\nRevenge trading is the act of entering a trade immediately after a loss with the sole purpose of making the money back. It is the single most destructive behavior in trading. The subconscious mind perceives a loss as pain and wants to eliminate that pain as fast as possible. The fastest way to eliminate the pain of losing money is to make it back right now. So you skip your process, force a setup that is not there, size up because you need to recover faster, and take a trade that has nothing to do with your system.\n\nThe result is almost always a second loss that is larger than the first. Now you are in a deeper hole, the emotional pressure is higher, and the cycle repeats. Three revenge trades in a row can wipe out a week of good work in twenty minutes.\n\nThe fix is mechanical. Set a rule: after two consecutive losses, you are done for the session. No exceptions. Close the platform. Walk away. The market will be there tomorrow. Two losses do not ruin a week. Five revenge trades do.\n\n<span id=\"04-fear-of-missing-out\"></span>\n## 04 Fear of Missing Out\nFOMO makes you chase trades that have already left without you. Price moves to your level, triggers without you in, and now it is running. Your subconscious screams to get in before it goes further. You enter late, with a worse entry, a wider stop, and no edge. You are now in a position where the risk reward is destroyed and the only reason you are in is because you could not handle watching it go without you.\n\nThe reality is that the market produces setups every single day. Missing one trade is irrelevant over a career of thousands of trades. But taking one bad trade out of FOMO can cascade into a series of bad decisions that define your entire session.\n\nWhen you feel the urge to chase, recognize it for what it is. It is not analysis. It is emotion. Mark the trade as missed, note what you would have done differently to catch it next time, and wait for the next setup. The next setup is always coming.\n\n<span id=\"05-overtrading\"></span>\n## 05 Overtrading\nOvertrading is not just about taking too many trades. It is about taking trades that do not meet your criteria. Every trade you take outside of your system dilutes your edge. If your system produces 3 high quality setups per day and you take 12 trades, 9 of those are noise. Those 9 trades add commissions, add risk, add emotional fatigue, and statistically pull your results toward random.\n\nThe best traders are often the ones who trade the least. They wait, they watch, and when their setup appears at their level with confirmation from their tools, they execute. Then they wait again. This requires patience that feels physically uncomfortable. Sitting in front of screens for hours without trading feels wrong. Your brain tells you that you should be doing something. But doing nothing when there is nothing to do is the highest skill in trading.\n\nSet a maximum number of trades per day. If your system typically produces 2 to 4 setups, cap yourself at 4. After 4 trades, you are done. This forces selectivity and prevents the slow bleed of overtrading.\n\n<span id=\"06-tilt\"></span>\n## 06 Tilt\nTilt is the state where your emotional arousal is so high that rational decision making shuts down completely. You are no longer trading. You are gambling. Your hands are shaking, your heart rate is elevated, and every decision is driven by fight or flight. Tilt can be triggered by a large loss, a series of small losses, a missed trade that would have been a big winner, or even a large win that creates overconfidence.\n\nThe problem with tilt is that you often do not recognize it while it is happening. Your subconscious has taken full control and your conscious mind is along for the ride. You feel like you are making rational decisions, but you are not. Every trade taken in tilt is a coin flip at best and usually worse because your sizing is wrong, your levels are wrong, and your stops are wrong.\n\nBuild a tilt checklist. Physical signs: elevated heart rate, tension in shoulders or jaw, shallow breathing, sweating. Behavioral signs: clicking faster, canceling and re-entering orders, ignoring your stop levels, checking P&L every few seconds. If you notice two or more of these, you are tilted. Stop trading immediately. Not after the next trade. Now.\n\n<span id=\"07-the-journaling-habit\"></span>\n## 07 The Journaling Habit\nJournaling is not optional. It is the mechanism through which the conscious mind teaches the subconscious mind. Every session should be reviewed. Not just the trades you took, but the trades you did not take. What setups appeared? Did you recognize them in real time? If you recognized them, did you act? If you did not act, why not?\n\nWrite down the emotional state you were in during each decision. Were you calm and focused when you entered? Were you anxious? Were you bored and looking for action? The patterns in your emotional states will reveal more about your trading problems than any technical analysis ever will.\n\nReview your journal weekly. Look for recurring patterns. You will find that your losses cluster around specific behaviors: trading during the first 5 minutes, sizing up after a win, holding through your stop because you were certain, entering without confirmation because the level looked good enough. These patterns are your leaks. Fix them one at a time.\n\n<span id=\"08-discipline-is-a-skill\"></span>\n## 08 Discipline is a Skill\nDiscipline is not something you either have or do not have. It is a skill that is trained through repetition, just like reading the DOM or identifying value areas. Every time you follow your rules despite wanting to break them, you strengthen the neural pathway for discipline. Every time you break your rules, you strengthen the neural pathway for impulsive behavior.\n\nStart small. Pick one rule and follow it perfectly for 20 consecutive sessions. It could be as simple as: I will not trade in the first 5 minutes after the open. Once you have 20 sessions of perfect compliance, add a second rule. Stack rules gradually. Trying to enforce 15 rules on day one will fail because you are overloading a muscle that has not been trained yet.\n\nThe traders who survive long enough to become profitable are not the ones with the best systems. They are the ones who developed the discipline to follow their system when it mattered. The system is the easy part. The execution is where careers are made or broken.\n\n<span id=\"09-expectations-and-patience\"></span>\n## 09 Expectations and Patience\nMost traders fail because their expectations do not match reality. They expect to be profitable within weeks. They expect every trade to win. They expect a linear equity curve. None of these things are real. The learning curve in trading is measured in years, not months. Profitable traders lose on 40 to 60 percent of their trades. Equity curves have drawdowns that can last weeks.\n\nAccept that you will have losing days, losing weeks, and losing months even when you are doing everything right. Variance is real and it does not care about your feelings. The only thing you control is your process. If your process is sound and your edge is real, the results will come. But they will come on the market's timeline, not yours.\n\nDo not set P&L targets. Do not tell yourself you need to make a certain amount per day or per week. P&L targets create pressure to force trades when the market is not offering your setup. Instead, set process targets. I will follow my rules on every trade today. I will journal every session this week. I will review my data every Sunday. These are things you control. The money follows the process.\n\n<span id=\"10-youtube-videos\"></span>\n## 10 YouTube Videos\nTrading Psychology\n\nMental Game\n\nTrading Discipline\n\n Discussion [Curriculum Index](/education)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "edge",
+    "phase": "Phase 03",
+    "phaseNum": "03",
+    "phaseTitle": "Psychology & Edge",
+    "category": "Psychology & Edge",
+    "title": "Finding Your Edge",
+    "subtitle": "The five non-negotiable pillars: Bias, Location, Execution, Risk Management, and Profit Management.",
+    "readTime": "2 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-the-five-pillars-of-edge",
+        "title": "The Five Pillars of Edge",
+        "level": 2
+      },
+      {
+        "id": "02-youtube-videos",
+        "title": "YouTube Videos",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"01-the-five-pillars-of-edge\"></span>\n## The Five Pillars of Edge\n 01 Bias \n\nKnowing what direction you expect price to move before the session starts. Bias comes from structural analysis, overnight context, and higher timeframe positioning. Without bias you are reacting instead of anticipating.\n\n 02 Location \n\nIdentifying where you want to engage. Not every level is worth trading. Location means waiting for price to reach a structural area where your edge exists rather than forcing trades in the middle of nowhere.\n\n 03 Execution \n\nThe trigger that gets you into the trade. This is where orderflow tools come in. Absorption, exhaustion, pulling and stacking, delta divergence. Execution confirms that the auction is behaving as expected at your location.\n\n 04 Risk Management \n\nDefining your stop and position size before you enter. Risk management is not optional. It is the foundation that keeps you in the game. Without it, one bad trade can undo weeks of good work.\n\n 05 Profit Management \n\nKnowing when and how to take profit. This is where most edge is lost. Cutting winners too early or holding too long are both symptoms of not having a plan for exits. Define your targets before you enter.\n\n<span id=\"02-youtube-videos\"></span>\n## YouTube Videos\nDeveloping Edge\n\nFinding Edge\n\nBuilding Edge\n\n [Curriculum Index](/education)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "creating-models",
+    "phase": "Phase 04",
+    "phaseNum": "04",
+    "phaseTitle": "Trading Models",
+    "category": "Trading Models",
+    "title": "Creating Models",
+    "subtitle": "Context + Trigger = Execution. Step-by-step framework to engineer repeatable orderflow setups.",
+    "readTime": "5 min read",
+    "author": "es.claudio",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1254034015338369050/60670336363b373e2f8ea50fd0002003.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "what-is-an-orderflow-model",
+        "title": "What is an Orderflow Model?",
+        "level": 2
+      },
+      {
+        "id": "building-your-toolset",
+        "title": "Building Your Toolset",
+        "level": 2
+      },
+      {
+        "id": "the-5-pillars-of-edge",
+        "title": "The 5 Pillars of Edge",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "<span id=\"what-is-an-orderflow-model\"></span>\n## What is an Orderflow Model?\nAn orderflow model is a repeatable process for identifying, entering, and managing trades. It combines a specific set of tools into a structured workflow: establish directional bias, locate areas of interest, confirm with orderflow, define risk, manage profit. Every model on this platform follows this structure.\n\nModels are not rigid. They are starting points. Adapt them based on your own screen time and market understanding. More tools does not mean more edge. Pick the tools that make sense to you and discard the rest.\n\n<span id=\"building-your-toolset\"></span>\n## Building Your Toolset\nThis is a starting point. As you gain screen time you will adapt, swap tools, and add new ones.\n\n 01 Auction Market Theory \n\nThe foundation. Without understanding how auctions work, no tool will make sense.\n\n 02 Volume Profile or TPO \n\nPick one. Volume Profile measures volume at price. TPO measures time at price. You do not need both.\n\n 03 Consider VWAP \n\nDynamic reference levels based on where volume transacted. Fits into almost any model.\n\n 04 One Level 2 Tool \n\nDOM, Footprint, or Heatmap. Pick one for execution and master it. Adding all three adds noise.\n\n<span id=\"the-5-pillars-of-edge\"></span>\n## The 5 Pillars of Edge\nA complete trading model requires a clear answer to each of the five pillars.\n\n 01 Bias \n\nKnowing what direction you expect price to move before the session starts. Bias comes from structural analysis, overnight context, and higher timeframe positioning. Without bias you are reacting instead of anticipating.\n\n 02 Location \n\nIdentifying where you want to engage. Not every level is worth trading. Location means waiting for price to reach a structural area where your edge exists rather than forcing trades in the middle of nowhere.\n\n 03 Execution \n\nThe trigger that gets you into the trade. This is where orderflow tools come in. Absorption, exhaustion, pulling and stacking, delta divergence. Execution confirms that the auction is behaving as expected at your location.\n\n 04 Risk Management \n\nDefining your stop and position size before you enter. Risk management is not optional. It is the foundation that keeps you in the game. Without it, one bad trade can undo weeks of good work.\n\n 05 Profit Management \n\nKnowing when and how to take profit. This is where most edge is lost. Cutting winners too early or holding too long are both symptoms of not having a plan for exits. Define your targets before you enter.\n\n [Curriculum Index](/education)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "vld",
+    "phase": "Phase 04",
+    "phaseNum": "04",
+    "phaseTitle": "Trading Models",
+    "category": "Trading Models",
+    "title": "VLD Model (Value Level Deviation)",
+    "subtitle": "Overnight inventory bias + TPO draws + paired VWAP/VP shelf deviations.",
+    "readTime": "4 min read",
+    "author": "j4nnes",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1249652457429139479/cb48b6ff9e383b2a3c970ae3c0bb0eb2.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-bias",
+        "title": "Bias",
+        "level": 2
+      },
+      {
+        "id": "02-tpo-draws",
+        "title": "TPO Draws",
+        "level": 2
+      },
+      {
+        "id": "03-paired-levels-vwap--vp",
+        "title": "Paired Levels (VWAP + VP)",
+        "level": 2
+      },
+      {
+        "id": "04-entry-confirmation",
+        "title": "Entry Confirmation",
+        "level": 2
+      },
+      {
+        "id": "05-profit-management",
+        "title": "Profit Management",
+        "level": 2
+      },
+      {
+        "id": "06-risk-management",
+        "title": "Risk Management",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "Orderflow is a highly personalized and experience based skill. These models are heavily simplified examples, presented almost as patterns and stripped of the discretion real trading requires. Developing a real edge requires extensive screen time and adapting the structure to your own read of the auction. Treat these as starting points, not rules to follow blindly.\n\n<span id=\"01-bias\"></span>\n## Bias\n- Identify Overnight Inventory: Determine the directional bias from overnight activity\n- Identify prior value you could play. Continuation trades only \n\n<span id=\"02-tpo-draws\"></span>\n## TPO Draws\n Unfinished Auctions Poor Highs / Poor Lows Open Single Prints Balanced Area Draws \n\n<span id=\"03-paired-levels-vwap--vp\"></span>\n## Paired Levels (VWAP + VP)\n#### Volume Profile\n\n Outstanding Shelfs / Ledges \n\n#### VWAP Deviations\n\n +/- 1 Dev +/- 2 Dev +/- 2.5 Dev Normal VWAP \n\n<span id=\"04-entry-confirmation\"></span>\n## Entry Confirmation\nWait for DOM / Footprint confirmation before entering any trade.\n\n Absorption Exhaustion Finished Auction \n\nNever enter without confirmation.\n\n<span id=\"05-profit-management\"></span>\n## Profit Management\n#### Targets\n\n TPO / VP Levels AMT Points of Interest \n\n#### Partials\n\n CVD Divergence SMT Divergence Extremes of TPO Confluences Absorption in opposing direction HVNs \n\n<span id=\"06-risk-management\"></span>\n## Risk Management\n 1st Trade Win → Done for the day 1st Trade Loss → Derisk 50% 2nd Trade Win → Done for the day 2nd Trade Loss → Done for the day [Curriculum](/education)[Next: 1VW](/education/1vw)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "1vw",
+    "phase": "Phase 04",
+    "phaseNum": "04",
+    "phaseTitle": "Trading Models",
+    "category": "Trading Models",
+    "title": "1VW Model (One VWAP Wide)",
+    "subtitle": "First session VWAP test setup: directional bias, structural levels, and footprint confirmation.",
+    "readTime": "4 min read",
+    "author": "j4nnes",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1249652457429139479/cb48b6ff9e383b2a3c970ae3c0bb0eb2.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-bias",
+        "title": "Bias",
+        "level": 2
+      },
+      {
+        "id": "02-levels",
+        "title": "Levels",
+        "level": 2
+      },
+      {
+        "id": "03-entry-confirmation",
+        "title": "Entry Confirmation",
+        "level": 2
+      },
+      {
+        "id": "04-profit-management",
+        "title": "Profit Management",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "Orderflow is a highly personalized and experience based skill. These models are heavily simplified examples, presented almost as patterns and stripped of the discretion real trading requires. Developing a real edge requires extensive screen time and adapting the structure to your own read of the auction. Treat these as starting points, not rules to follow blindly.\n\n<span id=\"01-bias\"></span>\n## Bias\n- Identify current AMT Draw: Where is the market trying to go?\n- Identify prior value. Continuation trades only \n\n<span id=\"02-levels\"></span>\n## Levels\nCondition\n\nPrice must be above +1 VWAP or below -1 VWAP\n\n#### Multi-Timeframe Levels\n\n 7d / 14d / 365d Shelfs & Ledges 7d / 14d / 365d HVN Extremes Weekly VPOCs \n\nFocus on outstanding levels that make sense with AMT. The key is confluence between multi-timeframe volume profile levels and the current auction context.\n\n<span id=\"03-entry-confirmation\"></span>\n## Entry Confirmation\nWait for DOM / Footprint confirmation before entering any trade.\n\n Absorption Exhaustion Finished Auction \n\nNever enter without confirmation.\n\n<span id=\"04-profit-management\"></span>\n## Profit Management\n#### Targets\n\nFocus on smaller targets: 5-8 ES points. If there is an Unfinished Auction near that amount, target that instead.\n\n#### Partials\n\n CVD Divergence SMT Divergence TPO Draws (SP, UFA, PH/PL) Absorption in opposing direction HVNs & Overall AMT Targets \n\n“Feel free to add any confirmations you like or include other levels that would play out above +1 or below -1 VWAP. Just see how it works for you, be dynamic, test it out, and collect your own data.”\n\n [Prev: VLD](/education/vld)[Next: OS9](/education/os9)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "os9",
+    "phase": "Phase 04",
+    "phaseNum": "04",
+    "phaseTitle": "Trading Models",
+    "category": "Trading Models",
+    "title": "OS9 Model (Overlapping Setup)",
+    "subtitle": "High-probability execution combining overlapping prior value areas and session liquidity pockets.",
+    "readTime": "3 min read",
+    "author": "es.nine",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/1201253812334231592/3cf90528064b781c5366c5bd8dee8433.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-bias",
+        "title": "Bias",
+        "level": 2
+      },
+      {
+        "id": "02-overlapping-levels",
+        "title": "Overlapping Levels",
+        "level": 2
+      },
+      {
+        "id": "03-entry-confirmation",
+        "title": "Entry Confirmation",
+        "level": 2
+      },
+      {
+        "id": "04-profit-management",
+        "title": "Profit Management",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "Orderflow is a highly personalized and experience based skill. These models are heavily simplified examples, presented almost as patterns and stripped of the discretion real trading requires. Developing a real edge requires extensive screen time and adapting the structure to your own read of the auction. Treat these as starting points, not rules to follow blindly.\n\n<span id=\"01-bias\"></span>\n## Bias\n- Overnight Inventory: Direction from the overnight session\n- AMT Draw: Where is the auction heading? \n\n<span id=\"02-overlapping-levels\"></span>\n## Overlapping Levels\n 0.62 OTE of current Range Overlapping VWAP \n\n#### Optional Additions\n\n Shelfs / Ledges Focus on level with SMT \n\n<span id=\"03-entry-confirmation\"></span>\n## Entry Confirmation\nWait for DOM / Footprint confirmation before entering any trade.\n\n Absorption Exhaustion Finished Auction \n\nNever enter without confirmation.\n\n<span id=\"04-profit-management\"></span>\n## Profit Management\n#### Targets\n\n TPO / VP Levels AMT Points of Interest \n\n#### Partials\n\n CVD Divergence SMT Divergence Extremes of TPO Confluences Absorption in opposing direction HVNs [Prev: 1VW](/education/1vw)[Next: ONVP](/education/onvp)",
+    "quizQuestions": null
+  },
+  {
+    "slug": "onvp",
+    "phase": "Phase 04",
+    "phaseNum": "04",
+    "phaseTitle": "Trading Models",
+    "category": "Trading Models",
+    "title": "ONVP Model (Overnight Volume Profile)",
+    "subtitle": "Exploiting overnight volume distributions, inventory imbalance, and session open auctions.",
+    "readTime": "3 min read",
+    "author": "59venox",
+    "authorAvatar": "https://cdn.discordapp.com/avatars/946765405974843462/8ccaf19c71706ff94704731e424fe080.png?size=64",
+    "tableOfContents": [
+      {
+        "id": "01-bias",
+        "title": "Bias",
+        "level": 2
+      },
+      {
+        "id": "02-levels",
+        "title": "Levels",
+        "level": 2
+      },
+      {
+        "id": "03-entry-confirmation",
+        "title": "Entry Confirmation",
+        "level": 2
+      },
+      {
+        "id": "04-profit-management",
+        "title": "Profit Management",
+        "level": 2
+      }
+    ],
+    "contentMarkdown": "Orderflow is a highly personalized and experience based skill. These models are heavily simplified examples, presented almost as patterns and stripped of the discretion real trading requires. Developing a real edge requires extensive screen time and adapting the structure to your own read of the auction. Treat these as starting points, not rules to follow blindly.\n\n<span id=\"01-bias\"></span>\n## Bias\n- Overnight Inventory: Direction from the overnight session\n- AMT Draw: Where is the auction heading? \n\n<span id=\"02-levels\"></span>\n## Levels\nHow to draw\n\nDraw Volume Profile from Daily Open → RTH Open. This captures the overnight session's volume distribution.\n\n#### Mark These Levels\n\n High Volume Nodes Low Volume Nodes Shelves \n\nImportant: Use these levels with context. Don't spam trades at every level. The overnight VP levels should align with your broader AMT read.\n\n<span id=\"03-entry-confirmation\"></span>\n## Entry Confirmation\nWait for DOM / Footprint confirmation before entering any trade.\n\n Absorption Exhaustion Finished Auction \n\nNever enter without confirmation.\n\n<span id=\"04-profit-management\"></span>\n## Profit Management\n#### Targets\n\n TPO / VP Levels AMT Points of Interest \n\n#### Partials\n\n CVD Divergence SMT Divergence Extremes of TPO Confluences Absorption in opposing direction HVNs [Prev: OS9](/education/os9)[Curriculum](/education)",
+    "quizQuestions": null
+  }
+]
